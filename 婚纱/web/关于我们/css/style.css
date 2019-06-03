@@ -1,0 +1,187 @@
+*{
+	padding:0;
+	margin: 0;
+}
+
+ul{
+	list-style: none;
+}
+a{
+	text-decoration: none;
+}
+.top-a,
+.head-a,
+.dress-a,
+.movement-a,
+.tali-a,
+.dt-a,
+.demo-a{
+	width: 1080px;
+	margin: 0 auto;
+}
+
+.top-a{
+	position: relative;
+	height: 80px;
+	/* background-color: yellow; */
+}
+.top-a .logo{
+	float: left;
+	position: absolute;
+	left: 60px;
+	top: 50%;
+	/* margin-top: 40px; */
+	width: 186px;
+	height: 48px;
+	background: url(../img/logo.png) no-repeat center;
+	margin-top: -24px;
+}
+.top-a .nva{
+	position: absolute;
+	right: 0;
+	top: 50%;
+	margin-top: -9px;
+}
+.top-a .top-a1{
+	position: relative;
+	float: left;
+	font-size: 15px;
+	width: 68px;
+	height: 18px;
+	line-height: 18px;
+	text-align: center;
+	margin: 0 43px 0;
+
+}
+.top-a .nva .line{
+	display: none;
+	position: absolute;
+	left: 0;
+	bottom: -2px;
+	height: 1px;
+	width: 100%;
+	background-color: #B9AB77;
+}
+
+.nva .mro .line{
+    width: 30px;
+    left: auto;
+    right: 0;
+}
+.nva .mro{
+	text-align: right;
+}
+.top-a .nva .top-a1:hover .line{
+   display: block;
+   
+}
+.top-a .nva .top-a1:hover a{
+    font-weight: bolder;
+}
+.top-a .nva .top-a1 a{
+	color: #000;
+}
+.top-a1.active a{
+	display: block;
+}
+.top-a1.active .line{
+	display: block;
+}
+.head{
+	height: 270px;
+	background: url(../img/pro1.png) no-repeat center;
+    background-size: 100% 100%;
+}
+.demo-a{
+	height: 229px;
+	position: relative;
+}
+.demo-b{
+	position: absolute;
+	top: 100px;
+	height: 52px;
+	width: 1080px;
+	}
+.demo .demo-a1{
+	text-align: center;
+   /*  margin-right:457px;
+   background-color: #fff; */
+}
+.demo-a12{
+	font-size: 25px;
+}
+.demo-a13{
+	color: #C5C5C5;
+}
+.dress-a{
+	height: 500px;
+	/* background-color: blue; */
+}
+.dress-b{
+	 float: left; 
+     margin-right: 68px;
+    /*  margin-bottom: 40px; */
+     width: 422px;
+	 height: 314px;
+	 background: url(../img/pro2.png) no-repeat center;
+	
+}
+.dress-a p{
+	font-size: 17px;
+	text-indent: 2em;
+	line-height: 26px;
+}
+.movement-a{
+	 position: relative; 
+	height: 512px;
+
+}
+.movement-b{
+	width: 1080px;
+	height: 345px;
+	background: url(../img/pro3.png) no-repeat center;
+}
+.movement-a .h1{
+	font-size: 26px;
+}
+.movement-a .h2{
+	font-size: 18px;
+    line-height: 30px;
+}
+.dt-a{
+	position: relative;
+	height: 325px;
+
+}
+.dt-b{
+	height: 263px;
+	width: 473px;
+	background: url(../img/pro4.png) no-repeat center;
+}
+.dt-c{
+	position: absolute;
+	bottom: 60px;
+	margin-left: 513px;
+}
+ .tali{
+    	background-color: #4D4D4D;
+    }
+    .tali-a{
+    	position: relative;
+    	height: 100px;
+    	font-size: 5px;
+    }
+    .tali-b{
+	position: absolute;
+	top: 50%;
+	right: 0;
+	width: 400px;
+}
+.tali-c{
+	float: left;
+	font-size: 5px;
+
+}
+.tali-c.l5{
+	margin: 0 50px 0 50px;
+}

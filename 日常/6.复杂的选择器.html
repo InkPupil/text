@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>复杂的选择器</title>
+	<!-- 交集选择器
+    并集选择器
+    后代选择器
+    通配符 -->
+    <!-- 交集选择器同时具备所说的条件 -->
+	<style>
+		.text.bu{
+			color: orange;
+			font-size: 50px;
+		}
+		/*并集选择器,用逗号隔开*/
+		.lv,.ji{
+			color: yellow;
+			font-size: 100px;
+		}
+		/*后代选择器空格隔开*/
+		.ji .ren{
+			color: blue;
+			font-size: 150px;
+		}
+
+		
+	</style>
+</head>
+<body>
+	<div  class="text lv">绿地新都</div>
+	<div class="text bu">不凡学院</div>
+	<div class=" ji">
+		不凡科技
+		<div class="ren">
+		不凡人才</div>
+    </div>
+	
+
+	
+</body>
+</html>

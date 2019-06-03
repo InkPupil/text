@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>京东登录页</title>
+	<style>
+		*{
+			margin:0;
+			padding:0;
+		}
+		ul{
+			list-style: none;
+		}
+		a{
+			text-decoration: none;
+		}
+		.head{
+			position: relative;
+			width: 990px;
+			height: 80px;
+			/*background-color: pink;*/
+			margin: 0 auto;
+		}
+		.head .log{
+			float: left;
+			height: 80px;
+			width: 170px;
+			background: url(../img/logo.png) no-repeat center;
+		}
+		.head .welcome{
+			float: left;
+			height: 80px;
+			width: 96px;
+			/*background-color:yellow;*/
+			font-size: 24px;
+
+			margin-left:20px;
+			/*text-align: center;*/
+			line-height: 80px;
+
+
+
+		}
+		.wj{
+			position: absolute;
+			right: 0px;
+			bottom: 3px;
+			height: 21px;
+			width: 152px;
+			color: black;
+			text-indent: 18px;
+			background:url(../img/q-icon.png) no-repeat 0px center;
+		}
+		a{
+			color: black;
+		}
+		.title{
+
+			height: 40px;
+			text-align: center;
+			width: 100%;
+			background-color: #FFF8F0;
+		}
+		.title .hf{
+			/*float: left;*/
+			display: inline-block;
+			/*width: 900px;*/
+			height: 100%;
+			text-indent:20px;
+			line-height:40px;
+			font-size: 12px;
+			background: url(../img/icon-tips.png) no-repeat left center ;
+			margin: 0 auto;
+
+		}
+		.main{
+			height: 475px;
+			width: 100%;
+			background-color:orange;
+		}
+		.main .tp{
+			position: relative;
+			height: 475px;
+			width: 990px;
+			background:url(../img/bg.jpg) no-repeat center;
+			margin:0 auto;
+
+
+		}
+		.tp .demo{
+			position: absolute;
+			right: 0;
+			top: 15px;
+			width: 347px;
+			height: 400px;
+			background-color:#fff;
+		}
+		
+		.tp .demo .demo-ts{
+			width: 347px;
+			height: 40px;
+			font-size: 12px;
+			text-indent:28px; 
+			line-height:40px;
+			background:#FFF8F0 url(../img/icon-tips.png) no-repeat 10px center;
+		}
+		.demo .tab{
+			height: 53px;
+			width: 347px;
+			border-bottom: 1px solid #f0f0f0;
+
+		}
+		.demo .sm{
+			float: left;
+             width: 173px;
+             height: 20px;
+
+
+		}
+		.demo .zh{
+			float: left;
+			width: 173px;
+			height: 20px;
+			color: red;
+		}
+		.tab .dl1{
+			font-size: 20px;
+			line-height:20px;
+			text-align: center;
+			margin: 16px 0;
+			cursor: pointer;
+
+		}
+		.tab .sm{
+			border-right: 1px solid #f0f0f0;
+		}
+		.tab .sm:hover{
+			color: red;
+		}
+		.tab .zh:hover{
+			color: red;
+		}
+		.srk{
+			height: 199px;
+			width: 347px;
+			/*background-color: yellow;*/
+			margin-top: 34px;
+		}
+		.srk .srk-srk1{
+			width: 306px;
+			height: 38px;
+			/*background-color:blue;*/
+			margin:0px auto;
+			/*margin-top: 20px;*/
+		}
+		.srk .srk-srk2{
+			width: 306px;
+			height: 38px;
+			/*background-color:blue;*/
+            margin:0px auto;
+            /*margin-top: 18px;*/
+		}
+		.srk .srk4{
+			width: 306px;
+			height: 36px;
+			border: 1px solid #f0f0f0;
+			margin: 0 auto;
+			margin-top: 24px;
+		}
+		.srk .srk3{
+			float: left;
+			width: 36px;
+			height: 36px;
+			background-color:block;
+		}
+		.srk .user{
+			background: url(../img/pwd-icons-new.png) no-repeat;
+		}
+	    .srk .password{
+			background: url(../img/pwd-icons-new.png) no-repeat;
+			background-position: -50px 0;
+
+		}
+		 .srk input{
+			float: left;
+			width: 270px;
+			height: 36px;
+			border: none;
+			/*聚焦的时候*/
+			outline: none;
+			text-indent: 12px;
+
+		}
+		.srk .forget{
+			display: block;
+			width: 308px;
+			font-size: 14px;
+			text-align: right;
+			margin: 24px auto;
+			color: red;
+		}
+		.srk .srk5{
+			width: 308px;
+			height: 34px;
+			margin: 0 auto;
+			background-color:red;
+			/*font-size: */
+			text-align:center;
+			line-height: 34px;
+			color: #fff;
+		}
+		.foot{
+			position: relative;
+			height: 52px;
+		    /*width: 100%;*/
+			margin-top: 24px;
+			/*background-color: pink;*/
+
+
+		}
+		.demo .foot a{
+			position:relative;
+			float: left;
+			height: 19px;
+			line-height: 19px;
+			margin-top: 16px;
+			padding-left: 22px;
+			/*text-indent:18px;*/
+			/*background-color: red;*/
+		}
+		.foot .hx{
+			float: left;
+			width: 1px;
+			height: 15px;
+			background-color: #333;
+			margin-top: 20px;
+			margin-left: 16px;
+			margin-right: 16px;
+              }
+
+          .foot .qq-ion{
+          	margin-left: 20px;
+          }
+		.foot .qq-ion .qq{
+           position: absolute;
+           left: 0px;
+           top:2px;
+           width: 19px;
+           height: 19px;
+           background: url(../img/qq-wx.png) no-repeat ;
+           /*margin-left: 18px;*/
+
+		}
+		.foot .wx-ion .wx{
+           position: absolute;
+
+           left: 0px;
+           top:2px;
+           width: 19px;
+           height: 19px;
+           background: url(../img/qq-wx.png) no-repeat -19px 0;
+        }
+
+		.tp .foot .last{
+			position:absolute;
+			/*left: 50px;*/
+			right: 20px;
+			top: 0;
+
+
+		}
+		.tp .foot .last .last1{
+			position: absolute;
+			left: 0;
+			top: 2px;
+			width: 19px;
+			height: 19px;
+			background: url(../img/img.png) no-repeat ;
+			background-position: -102px -75px;
+
+		}
+
+
+		.boss{
+			height: 28px;
+			width: 100%;
+			text-align: center;
+			font-size: 15px;
+			/*background-color: yellow;*/
+		}
+		.boss .jdwy{
+			display: inline-block;
+			margin: 0 auto;
+
+		}
+		.boss .b{
+			margin: 5px;
+		} 
+		.boss1{
+			height: 28px;
+			width: 100%;
+			text-align: center;
+			font-size: 15px;
+			/*background-color: yellow;*/
+		}
+		.boss1 .b1{
+			display: inline-block;
+			margin:0 auto;
+
+		}
+
+
+	</style>
+</head>
+<body>
+	<div class="head">
+		       <div class="log">
+			
+		       </div>
+		      <div class="welcome">
+			欢迎登录
+			<a href="#">
+				
+			</a>
+		      </div>
+		         <span class="wj">
+				   <a href="">登录页面调查问卷</a> 
+			     </span>
+	         </div>
+	         <div class="title">
+		<div class="hf">
+			依据《网络安全法》，为保障您的账户安全和正常使用，请尽快完成手机号验证！ 新版 <a href="#">《京东隐私政策》</a>已上线，将更有利于保护您的个人隐私。
+		</div>
+	        </div>
+	         <div class="main">
+		       <div class="tp">
+			       <div class="demo">
+				                     <div class="demo-ts">
+					                  京东不会以任何理由要求您转账汇款，谨防诈骗。
+				                     </div>
+				                     <div class="tab">
+				                        <div class="dl1 sm">
+					                     扫码登录
+				                        </div>
+				                        <div class="dl1 zh">
+					                        账户登录
+				                        </div>
+                                     </div>
+                                     <div class="srk">
+                                         <div class="srk4 srk-srk1">
+                                         	<span class="srk3 user "></span>
+                           	             <input placeholder="请输入邮箱" type="text">
+
+                                         </div>
+                                         <div class="srk4 srk-srk2">
+                                         	<span class="srk3 password"></span>
+                           	             <input placeholder="请输入密码" type="password">
+
+                                         </div>
+                                         <a class="forget" href="#">忘记密码</a>
+                                         <div class="srk5">
+                                         	登&nbsp;&nbsp;&nbsp;&nbsp;录
+                                         </div>
+                                     </div> 
+			     <div class="foot">
+			     	<a class="ion qq-ion " href="#">
+
+			     	    <span class="link qq">
+			     		
+			     	    </span>
+			     	    QQ
+			        </a>
+			        <span class="hx">  </span>
+
+			        <a class="ion wx-ion" href="#">
+
+			        	   <span class="link wx">
+			        	   	
+			        	   </span>
+			        	   微信
+			        </a>
+			        <a href="#" class="last">
+			        	<span class="last1"></span>
+			        	立即注册
+			        </a>
+                
+			     </div>
+			     </div>
+			     
+		   </div>
+	</div>
+	<div class="boss">
+	   <div class="jdwy">
+	   	<a class="b" href="">关于我们</a> | 
+	   	<a class="b" href="">联系我们</a> | 
+	   	<a class="b" href="">人才招聘</a> | 
+	   	<a class="b" href="">商家入驻</a> | 
+	   	<a class="b" href="">广告服务</a> |
+	   	<a class="b" href="">手机京东</a> | 
+	    <a class="b" href="">友情链接</a> | 
+	  	<a class="b" href="">销售联盟</a> | 
+	  	<a class="b" href="">京东社区</a> | 
+	  	<a class="b" href="">京东公益</a> | 
+	   	<a class="b" href="">English Site</a>
+
+	   </div>
+	</div>
+	<div class="boss1">
+		<div class="b1">
+		<a href="">Copyright © 2004-2019  京东JD.com 版权所有</a>	
+		</div>
+	</div>
+	
+</body>
+</html>

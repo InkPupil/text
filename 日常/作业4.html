@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>咨询</title>
+	<style>
+		*{
+			margin: 0px;
+			padding: 0px;
+		}
+		ul{
+			list-style: none;
+		}
+		a{
+			text-decoration: none;
+		}
+		.zx{
+			position: fixed;
+			right: 80px;
+			bottom: 100px;
+			height: 120px;
+			width: 38px;
+			/*background-color: pink;*/
+		}
+		.zx .demo{
+			position: relative;
+			height: 38px;
+			width: 38px;
+			background-color: red;
+
+		}
+        .demo.zx-qq{
+        	background:#6872b9 url(../img/item-qq.png) no-repeat center;
+        }
+        .demo.zx-wx{
+        	background:#32af2c url(../img/wx.png) no-repeat center;
+        }
+         .zx .qq{
+         	/*display: none;*/
+        	position: absolute;
+        	right:0;
+        	bottom:0;
+        	width: 185px;
+        	height: 170px;
+        	/*background-color: yellow;*/
+        	/*z-index: 1;*/
+        }
+        .zx-qq .qq .title {
+        	position: relative;
+             width: 100%;
+             height: 40px;
+             line-height: 40px;
+             text-indent: 25px; 
+             background-color: #6872b9; 	
+
+        }
+        .zx .qq .title1{
+        	/*display: block;*/
+        	position: absolute;
+        	right: 10px;
+            bottom: 15px;
+        	height: 14px;
+        	width: 14px;
+        	background: url(../img/x.png) no-repeat center;
+        }
+        .zx-qq .qq .teacher{
+        	/*position: relative;*/
+        	width: 100%;
+        	height: 35px;
+        	line-height: 35px;
+            text-indent: 60px;
+            background: #9C9FA3 url(../img/tel.png) no-repeat 30px center; 
+        }
+        .zx .dz{
+        	height: 32px;
+        	width: 100%;
+        	text-align: center;
+        	line-height: 32px;
+        	background:  url(../img/tel.png) no-repeat 30px  center;
+
+        }
+        .zx .phone{
+        	height: 32px;
+        	width: 100%;
+        	text-align: center;
+        	line-height: 32px;
+        }
+        .zx .demo.zx-qq:hover .qq{
+        	display: block;
+        }
+        .zx .demo.zx-qq .qq .teacher:hover{
+        	background: #333 url(../img/qq.png) no-repeat 30px center;
+			color: #fff;
+			height: 40px;
+			line-height: 40px;
+			/*css3 过渡效果*/
+			transition: all ease .4s;
+        }
+        .demo.zx-wx .box{
+        	display: none;
+        	position: absolute;
+        	right: 38px;
+        	bottom: -92px;
+        	width: 132px;
+        	height: 132px;
+        	background:url(../img/qr.png);
+        
+        }
+        .zx .demo.zx-wx:hover .box{
+        	display: block;
+        }
+        .zx .img{
+        	margin-top: 5px;
+
+        	background:#646464 url(../img/up.png) no-repeat center;
+        }
+
+
+	</style>
+</head>
+<body>
+	<div class="zx">
+		<div class="demo zx-qq">
+			<ul class="qq">
+				<li class="title">
+				在线咨询
+				<span class="title1"></span>
+			    </li>
+				<li class="teacher">
+					<!-- <span class="teacher1">
+
+                    </span> -->
+                    张老师
+				</li>
+				<li class="teacher" >
+					<!-- <span class="teacher2">
+						
+					</span> -->
+
+					王老师
+				</li>
+				<div class="dz">
+					联系电话
+				</div>
+				<li class="phone">
+					0376-6666666
+				</li>
+			</ul>
+
+			
+		</div>
+		<div class="demo zx-wx">
+			<div class="box">
+				
+			</div>
+		</div>
+		<div class="demo img">
+			
+		</div>
+	</div>
+	
+</body>
+</html>

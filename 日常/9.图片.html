@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>图片</title>
+	<style>
+		/*scroll、fixed (注意：基于body的定位*/
+		body{
+			/*height: 800px;
+			width: 800px;*/
+			background-color: yellow;
+			background-attachment:fixed ;
+			background-image: url(img/bf.png);
+			background-repeat: no-repeat;
+			background-position: center;
+		}
+		
+		.photo{
+			height: 500px;
+			width: 400px;
+			background-color: pink;
+			background-image: url(img/bf.png);
+			/*不平铺*/
+			background-repeat: no-repeat;
+			background-position: 50% 50%;
+		}
+		/*scroll、fixed (注意：基于body的定位*/
+		
+		
+		.box{
+			/*块级元素变为行内块级元素*/
+			display: inline-block;
+			height: 35px;
+			width: 35px;
+			background-color:blue;
+			background-image: url(img/img.png);
+			background-position: -50px 0;
+
+		}
+
+		.box1{
+			height: 2000px;
+			width: 400px;
+
+		}
+		img{
+			background-position: center;
+		}
+		p{
+			text-align: center;
+			color: #77ADB9;
+		}
+		/*交集选择器*/
+		.box.d1{
+			background-position: 0px -96px;  
+		}
+		.box.d2{
+			background-position: -50px -96px;
+		}
+
+		.box.d3{
+			background-position: -50px -48px;
+
+		}
+		.box.d4{
+			background-position: 0px -48px;
+
+		}
+		.box.d5{
+			background-position: 0px -96px;
+
+		}
+	</style>
+</head>
+<body>
+	<div class="photo">
+		<img src="img/bf.png" alt="11111">
+		
+		
+	</div>
+	<div class="box">
+		<p>1</p>
+		
+	</div>
+	<div class="box d1">
+		<p>2</p>
+		
+	</div>
+	<div class="box d2">
+		<p>3</p>
+		
+	</div>
+	<div class="box d3">
+		<p>4</p>
+	</div>
+	<div class="box d4">
+		<p>5</p>
+	</div>
+	<div class="box d5">
+		<p>6</p>
+	</div>
+	<div class="box1">
+		
+	</div>
+	
+</body>
+</html>

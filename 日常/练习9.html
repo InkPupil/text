@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>练习</title>
+	<style>
+		*{
+			margin:0;
+			padding: 0;
+		}
+		ul{
+			list-style: none;
+
+		}
+		a{
+			text-decoration: none;
+		}
+		.box{
+			height: 500px;
+			width: 500px;
+			background-color:yellow;
+			overflow: hidden;
+		}
+		.inner-box{
+			height: 80px;
+			width: 30px;
+			background-color: red;
+			margin: 60px auto;
+
+		}
+		.inner-box .box1{
+			width: 100%;
+			height: 20px;
+			background-color:blue;
+			margin-top: 1px ;
+
+
+		}
+		.box1{
+			position:relative;
+		}
+		.box1 .inner-box1{
+			position:absolute;
+			left: 30px;
+			bottom: 0px;
+			height: 30px;
+			width: 30px;
+			background-color:pink;
+
+		}
+	</style>
+</head>
+<body>
+	<div class="box">
+		<div class="inner-box">
+			<div class="box1 top">
+				<div class="inner-box1">
+					
+				</div>
+			</div>
+			<div class="box1">
+				
+			</div>
+			<div class="box1">
+				
+			</div>
+			<div class="box1">
+				
+			</div>
+			
+		</div>
+	</div>
+</body>
+</html>

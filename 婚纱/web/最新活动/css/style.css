@@ -1,0 +1,257 @@
+*{
+	padding:0;
+	margin: 0;
+}
+
+ul{
+	list-style: none;
+}
+a{
+	text-decoration: none;
+}
+.top-a,
+.head-a,
+.demo-a,
+.dress-a,
+.movement-a,
+.tali-a,
+.bq-a{
+	width: 1200px;
+	margin: 0 auto;
+}
+.top-a{
+	position: relative;
+	height: 80px;
+	// background-color: yellow;
+}
+.top-a .logo{
+	float: left;
+	position: absolute;
+	left: 60px;
+	top: 50%;
+	// margin-top: 40px;
+	width: 186px;
+	height: 48px;
+	background: url(../img/logo.png) no-repeat center;
+	margin-top: -24px;
+}
+.top-a .nva{
+	position: absolute;
+	right: 0;
+	top: 50%;
+	margin-top: -9px;
+}
+.top-a .top-a1{
+	position: relative;
+	float: left;
+	font-size: 15px;
+	width: 68px;
+	height: 18px;
+	line-height: 18px;
+	text-align: center;
+	margin: 0 43px 0;
+
+}
+.top-a .nva .line{
+	display: none;
+	position: absolute;
+	left: 0;
+	bottom: -2px;
+	height: 1px;
+	width: 100%;
+	background-color: #B9AB77;
+}
+
+.nva .mro .line{
+    width: 30px;
+    left: auto;
+    right: 0;
+}
+.nva .mro{
+	text-align: right;
+}
+.top-a .nva .top-a1:hover .line{
+   display: block;
+   
+}
+.top-a .nva .top-a1:hover a{
+    font-weight: bolder;
+}
+.top-a .nva .top-a1 a{
+	color: #000;
+}
+.top-a1.active a{
+	display: block;
+}
+.top-a1.active .line{
+	display: block;
+}
+
+.head{
+	height: 269px;
+	background: url(../img/pro1.png) no-repeat center;
+    background-size: 100% 100%;
+}
+.demo-a{
+	height: 208px;
+	position: relative;
+}
+.demo-b{
+	position: absolute;
+	top: 100px;
+	height: 52px;
+	width: 1200px;
+	}
+.demo .demo-a1{
+	text-align: center;
+   /*  margin-right:457px;
+   background-color: #fff; */
+}
+.demo-a12{
+	font-size: 25px;
+}
+.demo-a13{
+	color: #C5C5C5;
+}
+.dress{
+	position: relative;
+	height: 200px;
+	background-color: #444444;
+}
+.dress-a{
+	width: 1200px;
+	height: 200px;
+}
+.dress .dress-ab1{
+	position: absolute;
+	top: 50px;
+	/* left: 190px; */
+	font-size: 60px;
+	color: #fff;
+	margin-left: 190px;
+	/*  margin-top: 60px ; */
+}
+.dress .dress-ab2{
+	position: absolute;
+	top: 60px;
+	color: #fff;
+	margin-left: 400px;
+}
+.dress .dress-ab3{
+	position: absolute;
+	top: 124px;
+	color: #fff;
+	margin-left: 317px;
+	font-size: 20px;
+}
+.dress .dress-ab4{
+	position: absolute;
+	top:104px;
+
+	width: 660px;
+	color: #fff;
+	margin-left: 400px;
+}
+/* .movement{
+	height: 199px;
+	width: 1200px;
+	border: 2px solid #929292; */
+/* } */
+.movement-a{
+	position: relative;
+	height: 199px;
+
+
+}
+.movement-ab1{
+	position: absolute;
+	top: 50px;
+	font-size:60px;
+	margin-left: 220px;
+	color: #929292;
+}
+.movement-ab2{
+	position: absolute;
+	top: 60px;
+	/* color: #fff; */
+	margin-left: 458px;
+}
+.movement-ab3{
+	position: absolute;
+	top: 124px;
+	/* color: #fff; */
+	margin-left: 348px;
+	font-size: 20px;
+	color: #929292;
+}
+.movement-ab4{
+	position: absolute;
+	top:104px;
+    width: 660px;
+	/* color: #fff; */
+	margin-left: 458px;
+}
+.jewellery{
+	height: 1px;
+	background-color: #929292;
+}
+.bq-a{
+	position: relative;
+	height: 120px;
+}
+.bq-b{
+	position: absolute;
+	top: 30px;
+	margin-left: 565px;
+	height: 30px;
+	/* background-color: red; */
+	text-align: center;
+	line-height: 30px;
+
+}
+.bq-b a{
+	display: block;
+	height: 30px;
+	width: 30px;
+}
+.bq-b1{
+	float: left;
+	height: 30px;
+	width: 30px;
+	border: 1px solid #929292; 
+}
+.bq-b1.mro1{
+	margin-left: 10px;
+}
+.bq-b .mro{
+	/* display: none; */
+	background-color: #929292;
+}
+.bq-b .mro1:hover{
+	background-color: #929292;
+}
+.bq-b1..active{
+	display: block;
+} 
+ .tali{
+    	background-color: #4D4D4D;
+    }
+    .tali-a{
+    	position: relative;
+    	height: 100px;
+    	font-size: 5px;
+    }
+    .tali-b{
+	position: absolute;
+	top: 50%;
+	right: 0;
+	width: 400px;
+}
+.tali-c{
+	float: left;
+	font-size: 5px;
+
+}
+.tali-c.l5{
+	margin: 0 50px 0 50px;
+}

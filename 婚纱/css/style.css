@@ -1,0 +1,617 @@
+*{
+	padding:0;
+	margin: 0;
+}
+
+ul{
+	list-style: none;
+}
+a{
+	text-decoration: none;
+}
+.top-a,
+.head-a,
+.dress-a,
+.jewellery-a,
+.movement-a,
+.banner-a,
+.tali-a,
+.demo-a{
+	width: 1200px;
+	margin: 0 auto;
+}
+.top-a{
+	position: relative;
+	height: 80px;
+	/* background-color: yellow; */
+}
+.top-a .logo{
+	float: left;
+	position: absolute;
+	left: 60px;
+	top: 50%;
+	/* margin-top: 40px; */
+	width: 186px;
+	height: 48px;
+	background: url(../img/logo.png) no-repeat center;
+	margin-top: -24px;
+}
+.top-a .nva{
+	position: absolute;
+	right: 0;
+	top: 50%;
+	margin-top: -9px;
+}
+.top-a .top-a1{
+	position: relative;
+	float: left;
+	font-size: 15px;
+	width: 68px;
+	height: 18px;
+	line-height: 18px;
+	text-align: center;
+	margin: 0 43px 0;
+
+}
+.top-a .nva .line{
+	display: none;
+	position: absolute;
+	left: 0;
+	bottom: -2px;
+	height: 1px;
+	width: 100%;
+	background-color: #B9AB77;
+}
+
+.nva .mro .line{
+    width: 20px;
+    left: auto;
+    right: 0;
+}
+.nva .mro{
+	text-align: right;
+}
+.top-a .nva .top-a1:hover .line{
+   display: block;
+   
+}
+.top-a .nva .top-a1:hover a{
+    font-weight: bolder;
+}
+.top-a .nva .top-a1 a{
+	color: #000;
+}
+.top-a1.active a{
+	display: block;
+}
+.top-a1.active .line{
+	display: block;
+}
+.head{
+	background: url(../img/pro1.png) no-repeat center;
+    background-size: 100% 100%;
+} 
+.head .head-a{
+	position: relative;
+	height: 720px;
+	
+	}
+.head .head-a .head-a1{
+	position: absolute;
+	left: -50px;
+	top: 50%;
+	margin-top: -40px;
+	width: 50px;
+	height: 80px;
+	background-color: #D4D3D7;
+	text-align: center;
+	line-height: 80px;
+	font-size: 30px;
+	color: #fff;
+
+}
+.head .head-a1.right{
+	left: auto;
+	right: -50px;
+}
+.head-b{
+	position: absolute;
+	left: 50%;
+	/* 向左移动自身的一半
+	不定宽的情景 */
+	transform: translateX(-50%);
+	bottom: 21px;
+}
+.head-b .head-b1{
+	float: left;
+	height: 8px;
+	width: 8px;
+	background-color: #BEBEC2;
+	
+	border: 5px solid transparent;
+	border-radius: 50%;
+	margin: 0 18px;
+	/* 背景色只在内容区域生效 */
+	background-clip: content-box;
+}
+.head-b .head-b1:hover{
+	border-color: #BEBEC2;
+	background-color: #fff;
+}
+.head-b .head-b1 .head-b2{
+	display: block;
+	width: 8px;
+	height: 8px;
+}
+.head-b .head-b1.active{
+	border-color: #BEBEC2;
+	background-color: #fff;
+}
+
+
+.dress-a{
+	position: relative;
+	height: 828px;
+	/* width: 100%;
+	background-color: pink; */
+}
+.dress-b{
+	position: absolute;
+	top: 100px;
+	height: 52px;
+	width: 1200px;
+   /*  text-align: center;
+   margin-right:457px;
+   background-color: #fff; */
+}
+.dress-a .dress-a1{
+	text-align: center;
+    /* margin-right:457px; */
+    background-color: #fff;
+}
+.dress-a12{
+	font-size: 20px;
+}
+.dress-a13{
+	color: #C5C5C5;
+}
+.dress-c{
+	position: absolute;
+	top: 232px;
+	height: 18px;
+	width: 1200px;
+	background-color: #fff;
+}
+
+.dress-c .dress-c1{
+	width: 570px;
+	height: 18px;
+	margin: 0 auto;
+	/* background-color: red; */
+}
+.dress-c .dress-c1 .line1{
+    float: left;
+
+}
+.dress-c1 .nva1 .zj2{
+	margin-left: 85px;
+}
+.dress-c1 .nva1 .zj1{
+	margin-left: 24px;
+}
+.dress-c1 .nva1 .zj3{
+	margin-left: 85px;
+}
+.dress-c1 .nva1 .zj4{
+	margin-left: 85px;
+}
+.dress-c1 .nva1 a{
+	color: #000;
+}
+.dress-c1 .nva1 .line1:hover a{
+	color: #BEB180;
+}
+.dress-a .dress-d{
+        position: absolute;
+        top: 303px;
+        height: 360px;
+        width: 1200px;
+        background-color: #fff;
+}
+.dress-d .dress-d1 .dress-d2{
+	    float: left;
+	    width: 270px;
+	    height: 360px;
+	    background-color: #333;
+
+}
+.dress-d1 .dress-d2.tu1{
+	background:  url(../img/pro2.png) no-repeat center;
+	text-align: center;
+	color: #fff;
+}
+
+.dress-d1 .dress-d2.tu2{
+	background:  url(../img/pro3.png) no-repeat center;
+	margin: 0 40px 0;
+}
+.dress-d1 .dress-d2.tu3{
+	background:  url(../img/pro4.png) no-repeat center;
+	margin-right: 40px;
+}
+.dress-d1 .dress-d2.tu4{
+	background:  url(../img/pro5.png) no-repeat center;
+}
+.dress-a .dress-e{
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	bottom: 60px;
+	width: 150px;
+	height: 45px;
+	border: 1px solid #F5F5F5;
+	text-align: center;
+	line-height: 45px;
+
+}
+.dress-a .dress-e a{
+	color: #333;
+}
+.jewellery{
+	background-color: #F9F9F9;
+}
+.jewellery-a{
+	position: relative;
+	height: 556px;
+	/* background-color: #fff; */
+}
+.jewellery-b{
+	position: absolute;
+	top: 100px;
+	height: 52px;
+	width: 1200px;
+	}
+.jewellery .jewellery-a1{
+	text-align: center;
+   /*  margin-right:457px;
+   background-color: #fff; */
+}
+.jewellery-a12{
+	font-size: 20px;
+}
+.jewellery-a13{
+	color: #C5C5C5;
+}
+.jewellery-a .jewellery-d{
+        position: absolute;
+        top: 211px;
+        height: 360px;
+       /*  width: 1200px;
+       background-color: #fff; */
+}
+.jewellery-d .jewellery-d1 .jewellery-d2{
+	    float: left;
+	    width: 270px;
+	    height: 180px;
+	    background-color: #333;
+
+}
+.jewellery-d1 .jewellery-d2.tu1{
+	position: relative;
+	background:  url(../img/pro6.png) no-repeat center;
+}
+.jewellery-d1 .jewellery-d2.tu2{
+	position: relative;
+	background:  url(../img/pro7.png) no-repeat center;
+	margin: 0 40px 0;
+}
+.jewellery-d1 .jewellery-d2.tu3{
+	position: relative;
+	background:  url(../img/pro8.png) no-repeat center;
+	margin-right: 40px;
+}
+.jewellery-d1 .jewellery-d2.tu4{
+	position: relative;
+	background:  url(../img/pro9.png) no-repeat center;
+}
+.jewellery-d1 .jewellery-d2d{
+	   display: none;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        width: 270px;
+        height: 60px;
+        background-color: rgba(124, 120, 116, 0.5);
+        color: #fff;
+}
+
+.jewellery-d1 .jewellery-d2.tu1:hover .jewellery-d2d{
+	display: block;
+}
+.jewellery-d1 .jewellery-d2.tu2:hover .jewellery-d2d{
+	display: block;
+}
+.jewellery-d1 .jewellery-d2.tu3:hover .jewellery-d2d{
+	display: block;
+}
+.jewellery-d1 .jewellery-d2.tu4:hover .jewellery-d2d{
+	display: block;
+}
+.jewellery-d2d .jewellery-d2a{
+       font-size: 18px;
+}
+.jewellery-d2d .jewellery-d2b{
+	color: #BBBBBB;
+}
+.jewellery-a .jewellery-e{
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	bottom: 60px;
+	width: 150px;
+	height: 45px;
+	border: 1px solid #E2E1E1;
+	text-align: center;
+	line-height: 45px;
+
+}
+.jewellery-a .jewellery-e a{
+	color: #333;
+}
+.demo-a{
+	height: 208px;
+	position: relative;
+}
+.demo-b{
+	position: absolute;
+	top: 100px;
+	height: 52px;
+	width: 1200px;
+	}
+.demo .demo-a1{
+	text-align: center;
+    /* margin-right:457px;
+    background-color: #fff; */
+}
+.demo-a12{
+	font-size: 20px;
+}
+.demo-a13{
+	color: #C5C5C5;
+}
+/* .movement-c{
+	width: 100%;
+	height: 354px;
+	background: url(../img/pro10.png) no-repeat center;
+	background-size: 100% 100%;
+
+}
+.sy{
+	position: relative;
+} */
+ .photo{
+
+     height: 354px;
+     background: url(../img/pro10.png) no-repeat center;
+     background-size: 100% 100%;
+ }
+ .movement-a{
+ 	position: relative;
+ 	height: 314px;
+
+ }
+ .movement-b{
+ 	position: absolute;
+ 	top: -183px;
+ 	left: 0;
+ 	height: 334px;
+
+ }
+
+ .movement-a .movement-b2{
+ 	float: left;
+ 	height: 334px;
+ 	width: 300px;
+
+ }
+.movement-a .movement-b2.tu1{
+	/* background: url(../img/pro12.png) no-repeat center; */
+	background-color: #fff;
+	
+	color: #8F8F8F;
+
+
+}
+.movement-b2a,.movement-b2b{
+	text-indent: 35px;
+}
+.movement-b2b{
+	color: #333;
+	font-size: 18px;
+	/* font-weight: 999px; */
+}
+.movement-b2a1{
+	font-size: 30px;
+	
+}
+.movement-b2c{
+	display: block;
+	margin-left: 35px;
+}
+.movement-b2d{
+	text-indent: 35px;
+}
+.movement-a .movement-b2.tu2{
+	
+	background: url(../img/pro11.png) no-repeat center;
+}
+.movement-a .movement-b2.tu3{
+	
+	/* background: url(../img/pro13.png) no-repeat center; */
+	background-color: #fff;
+	
+	color: #8F8F8F;
+}
+.movement-a .movement-b2.tu4{
+	
+	/* background: url(../img/pro14.png) no-repeat center; */
+	background-color: #fff;
+	
+	color: #8F8F8F;
+}
+.movement-b1 a{
+         color: #8F8F8F;
+}
+.movement-a .movement-b2.tu2 .bk{
+	
+	
+	display: block;
+	height: 321px;
+	width: 287px;
+	border: 1px solid #8596A2;
+	margin: 0 auto;
+	margin-top:7px;
+
+}
+.movement-a .movement-c{
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	bottom: 60px;
+	width: 150px;
+	height: 45px;
+	border: 1px solid #E2E1E1;
+	text-align: center;
+	line-height: 45px;
+
+}
+.movement-a .movement-c a{
+	color: #333;
+}
+.banner{
+	background-color: #4D4D4D;
+}
+.banner-a{
+	position: relative;
+	height: 664px;
+}
+.banner-b{
+	position: absolute;
+	top: 100px;
+    height: 52px;
+	width: 1200px;
+	}
+.banner .banner-a1{
+	text-align: center;
+}
+.banner-a12{
+	font-size: 20px;
+	color: #C5C5C5;
+}
+.banner-a13{
+	color: #C5C5C5;
+}
+.banner-c{
+	position: absolute;
+	top: 211px;
+	height: 453px;
+}
+.banner-c .banner-c2{
+	/* position: relative; */
+	float: left;
+	}
+.banner-c .banner-c2.s1{
+     width: 277px;
+     /* background-color: pink; */
+    height: 453px;
+    margin-left: 52px;
+    /* background: url(../img/pro15.png) no-repeat center; */
+
+}
+.banner-c .banner-c2.s2{
+    width: 277px;
+    /* background-color: pink; */
+    height: 453px;
+    margin-left: 138px;
+    /* background: url(../img/pro16.png) no-repeat  center; */
+
+}
+.banner-c .banner-c2.s3{
+    width: 277px;
+    /* background-color: pink; */
+   height: 453px;
+   margin-left: 133px;
+   /* background: url(../img/pro17.png) no-repeat  center; */
+
+}
+.banner-c2c1{
+	display: block;
+	width: 180px;
+	height: 180px;
+    background: url(../img/pro15.png) no-repeat center;
+    margin: 0 auto;
+}
+.banner-c2c2{
+	display: block;
+	width: 180px;
+	height: 180px;
+    background: url(../img/pro16.png) no-repeat center;
+    margin: 0 auto;
+}
+.banner-c2c3{
+	display: block;
+	width: 180px;
+	height: 180px;
+    background: url(../img/pro17.png) no-repeat center;
+    margin: 0 auto;
+}
+.banner-c1{
+	text-align: center;
+}
+.banner-c2b1{
+	font-size: 20px;
+	color: #fff;
+}
+.banner-c2b2{
+	color: #8F8E8E;
+}
+.banner-c2{
+    position: relative;
+}
+.banner-c2b3{
+	position: absolute;
+	bottom: 60px;
+	right: 60px;
+	width: 152px;
+	height: 22px;
+	margin-bottom: 77px;
+	margin: 0 auto;
+	color: #8F8E8E;
+
+}
+.banner-c2b4{
+	display: block;
+	height: 2px;
+	width: 100%;
+	background-color: #8F8E8E;
+	margin-top: 4px;
+}
+.tali-a{
+	position: relative;
+	height: 100px;
+	font-size: 5px;
+}
+.tali-b{
+	position: absolute;
+	top: 50%;
+	right: 0;
+	width: 400px;
+}
+.tali-c{
+	float: left;
+	font-size: 5px;
+
+}
+.tali-c.l5{
+	margin: 0 50px 0 50px;
+}
