@@ -542,7 +542,7 @@ a{
 .banner-a{
 	position: relative;
 	height: 950px;
-	background-color: pink;
+	/* background-color: pink; */
 }
 .banner-b{
 	position: relative;
@@ -564,4 +564,60 @@ a{
 	width: 60px;
 	background-color: #A1A1A1;
 
+}
+.banner-c1{
+	position: absolute;
+	right: 0;
+	top: 170px;
+	height: 1px;
+	width: 300px;
+
+	background-color: #A1A1A1;
+}
+/* 定ul盒子的位置 */
+.banner-d{
+	position: absolute;
+	top: 232px;
+	width: 1200px;
+	height: 570px;
+	/* background-color: yellow; */
+}
+/* li盒子浮动 */
+.banner-d1{
+	/* position: relative; */
+	float: left;
+	width: 570px;
+	height: 570px;
+	/* background-color: red; */
+}
+.banner-d1.url2{
+	margin-left: 60px;
+	background: url(../img/pro21.png) no-repeat center;
+	
+}
+.banner-d12{
+	height: 270px;
+	width: 570px;
+	background: url(../img/pro18.png) no-repeat center;
+}
+.banner-d131{
+	/* position: absolute;
+	top: 30px; */
+	display: block;
+	margin-top: 30px;
+	width: 570px;
+	height: 270px;
+}
+.banner-d132{
+	float: left;
+	width: 270px;
+	height: 270px;
+	/* background-color: blue; */
+}
+.banner-d132.ulr1{
+	background: url(../img/pro19.png) no-repeat center;
+}
+.banner-d132.ulr2{
+	margin-left: 30px;
+	background: url(../img/pro20.png) no-repeat center;
 }
