@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>数据类型的转换</title>
+</head>
+<body>
+    <script>
+    //   =====> 转换string类型. toString().或者＋
+    console.log('hello'+null);//null变为字符串
+    console.log('hello'+undefined);  //undefined变为字符串
+    console.log(true.toString());//true变为字符串
+    console.log(1+'不凡');
+
+
+    // ====>转换为boolean类型. Boolean()
+    // 数据0
+    // NaN
+    // ""空字符串
+    // false
+    //  undefined
+    // null
+    // 全是false
+    console.log(Boolean(0));
+    console.log(Boolean(NaN));
+    console.log(Boolean(""));
+    console.log(Boolean(false));
+    console.log(Boolean(undefined));
+    console.log(Boolean(null));
+    // ======>number类型 Namber() parseInt()  parseFloat()
+    //数字类型的字符串 可以转换成Number类型
+    console.log(Number('-123.123'));//-123.123
+    console.log(Number(' 123.12'));//123.12
+    console.log(Number(''));//0
+    console.log(Number(true));//true 1 false 0
+    //parseInt转换成整数,只取整数部分
+    console.log(parseInt('123.9'));//123
+    console.log(parseInnt('123a3'));//123
+    console.log(parseInt(''));//nan
+    //parseFloat转换成小数
+    console.log(parseFloat('123.99.33'));//123.99
+    console.log(parseFloat('123.9a9'));//123.9
+    </script>
+</body>
+</html>

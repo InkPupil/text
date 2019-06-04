@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>数据类型</title>
+</head>
+<body>
+    <script>
+        // 数据类型分为基础类型和复杂类型
+        // 基础类型有六种
+        // 1.字符串 string
+        // 用引号或者双引号包裹
+        // 注意引号不能嵌套 ,单双引号可以混用
+        var str= '我是一个字符串';
+        var str2='不凡学院';
+        var str3=str+str2;
+        console.log(str3);
+        // 2.数字 number(整数 小数(浮点数))
+        var number=20;
+        var age=15;
+        var floatNum=12.9;
+        console.log(number);
+
+        console.log(str-str2);
+        // 计算不出结果返回nan
+        // 无穷大infinity -infinty负无穷大
+        //  3.布尔值类型boolean
+        // true(真/符合条件)flase(假/不符合条件)
+        // 条件判断常用
+        var sex=true;
+        console.log(sex);
+        console.log('true');
+        // 4.undefined类型
+        // 当声明一个变量,没有初始化,默认也会给他初始化一个undefined值
+        var firstName;
+        console.log(firstName);
+        // 5.null类型 空值
+        var timel=null;
+        console.log(timel);
+        // 6.es6新增了Symbol 类型
+
+        // 复杂数据类型
+        // object
+        // Array数组类型
+        // Function函数
+        // 归根结底都是object
+        // key:value;
+        var obj={
+             name='张三',
+             age=20,
+             sex=true,
+             children:{
+                 name='李四',
+                 age=30
+             }
+        }
+        //数组类型 
+        // 数组元素用逗号格开
+        var arr=[4,5,6,name=李四,age=20,true,'不凡学院'];
+        // 函数
+        // function函数名(参数){
+            // 执行代码
+        // }
+        function foo(){
+            
+        }
+        // 怎么判断一个变量的数据的类型
+        console.log(typeof str);//string
+        console.log(typeof age);//number
+        console.log(typeof sex); // boolean
+        console.log(typeof firstName); // undefined
+        console.log(typeof timer); // object
+        console.log(typeof obj); // object
+        console.log(typeof arr); // object
+        console.log(typeof foo); // function
+
+
+
+
+        
+        
+
+        
+        
+    </script>   
+    
+</body>
+</html>

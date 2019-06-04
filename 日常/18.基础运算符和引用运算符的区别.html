@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+      // 基本数据类型(放在了 栈内存当中)
+      var a = 3;
+        var b = a; // 3
+        // 在栈内存中开辟了空间 存放变量a
+        a = 4;
+        console.log(b); // 3
+        // 引用数据类型(堆内存当中)
+        // 在堆内存开辟空间 存放了这个对象, 数据本身
+        // 同时在栈内存当中开辟空间 存放了变量obj(放的是 指针, 指向堆内存当中的这个对象) 并不是数据本身
+        var obj = {
+            name: '张三'
+            // 属性名:属性值
+        }
+        var obj2 = obj; // 赋给它的 仅仅是一个 引用地址 指针变量(地址)
+
+        obj.name = '李四';
+        console.log(obj.name); // 李四
+        console.log(obj2.name); // 李四   
+        
+        
+        
+        
+        
+        </script>
+</body>
+</html>
