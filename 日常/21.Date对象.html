@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>date</title>
+</head>
+<body>
+    <!-- Date对象 js内置的对象 -->
+    <script>
+    var obj={
+        namme='zhangshan',
+        age:14,
+        say:function(){
+            alert('nihao')
+        }
+    }
+    //获取对象的属性 对象.xxx 静态的 小狗的颜色身高
+    //调用对象的方法 对象.xx() 动态的 小狗跑 小狗跳
+    console.log(obj.name);
+    console.log(obj.age);
+    //obj.say();
+
+
+    //创造构造函数(Date)的实例对象
+    var date =new Date();
+    console.log(date);
+    console.log(new Date());
+    // date实例对象 具有 很多方法和属性
+    var year=date.getFullYear();//年份
+    var month= date.getMonth()+1;//月份
+    var day= date.getDate();//日期
+    var weekDay=date.getDay();//周几
+    var hour=date.getHours();//小时
+    var min=date.getMinutes();//分钟
+    var second=date.getSeconds();//秒
+    var milliSecond=date.getMilisecond();//毫秒
+    //常规拼接操作
+    var timestr=year+'-'+month+'-'+day+'-'+hour+':'+min+':'+second;
+    console.log(timester);
+    //时间戳
+    var stamp=date.getTime();
+    //当前时间见距离1970年0分0秒的毫秒数
+    console.log(stamp);
+
+    
+
+    </script>
+</body>
+</html>

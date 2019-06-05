@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>for循环</title>
+</head>
+<body>
+    <script>
+        
+        // 遍历
+        console.log(1);
+        // 想在控制台打印 100  个  1
+        // 自动循环执行
+        for (var i = 0; i < 100; i = i + 2) {
+            // 变量  i  循环变量
+            // i<100  循环条件
+            // 符合条件  执行里边的代码一次
+            // 执行完之后
+            // 执行i++  循环的 步长
+            console.log(1);
+        }
+
+        // 打印  1---100  这些数字
+        // 奇数
+        for (var i = 1; i <= 100; i = i + 2) {
+            console.log(i);
+        }
+
+        // 分析程序走向
+        for (var j = 1; j < 13; j = j + 4) {
+            console.log(j);
+        }
+        // 1    j==>5
+        // 5    j===>9
+        // 9    j==>13
+        console.log(j); // 13
+
+
+
+        for (var i = 1; i < 10; i = i + 3) {
+            i = i + 1;
+            console.log(i);
+        }
+        // 2   6   10 
+
+        for (var i = 1; i < 10; i = i + 1) {
+            if (i % 2 == 0) {
+                i = i * 2;
+            }
+            console.log(i);
+        }
+        // 1  4   5  12
+
+        // for (var i = 1; i > 0; i++) {
+        //     console.log(i);
+        // }
+    
+        
+        
+        
+    </script>
+</body>
+</html>

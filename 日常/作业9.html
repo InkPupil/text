@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>js第二天你作业</title>
+</head>
+<body>
+    <script>
+    // 用户输入一个数字，然后判断这个数字能否被5、6整除，根据情况弹出下面4种警告框： 
+    var num=parseFloat(prompt('请输入数字'));
+    if(num%5==0){
+         
+         if(num%6==0){
+            alert('这个数同时能被5和6整除') 
+         }else{
+             alert('这个数能被5整除,但不能被6整除')
+         }
+    }else if(num%6==0){
+        if(num%5!=0){
+            alert('这个数能被6整除,但不能被5整除')
+        }
+    }else{
+        alert('这个数不能被5整除也不能被6整除')
+    }  
+        
+        
+    </script>
+</body>
+</html>
