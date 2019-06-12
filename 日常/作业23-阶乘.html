@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 方法一
+    // var num=5;
+    // function foo(num){
+    //     var jc=1;
+    //     for(var i=1;i<=num;i++){
+            
+    //         jc=jc*i;
+    //     }
+    //     return jc
+    // }
+    
+    // console.log(foo(5));
+    //方法二
+    // var jc = 1;
+    //     for (var i = 1; i <= 5; i++) {
+    //         jc = jc * i;
+    //     }
+    //     console.log(jc);
+    //方法三
+    //递归的思想,自己调用自己,要有结束条件
+    function jc(num){
+        //跳出条件
+        if(num===1){
+            return 1;
+        }
+        return jc(num-1)*num;
+    }
+    console.log(jc(5));
+    </script>
+</body>
+</html>

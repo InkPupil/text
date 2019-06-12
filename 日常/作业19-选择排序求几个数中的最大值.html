@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>求几个数中的最大值</title>
+</head>
+<body>
+    <script>
+    var arr1=[3,5,2,1,6,8.9,10];
+
+    var sortArr=selectSort(arr1);
+
+    console.log(sortArr);
+    
+    function selectSort(arr){
+
+        for (var j=0;j<arr.length-1;j++){
+
+            var maxIndex=j;
+
+            for(var i=j;i<arr.length-1;i++){
+
+                if( arr[maxIndex]<arr[i+1]) {
+                    maxIndex=i+1;   
+                }  
+            }
+            if(maxIndex!=j){
+                var tem=arr[maxIndex];
+                arr[maxIndex]=arr[j];
+                arr[j]=tem;
+            }
+        }
+        // console.log(arr);
+         return arr
+    }
+    console.log(sortArr[0]);
+   
+    </script>
+</body>
+</html>

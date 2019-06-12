@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>质数</title>
+</head>
+<body>
+    <script>
+//     质数：就是只能被1和自己整除。
+// 翻译过来：它的因数个数是2。
+// 比如：2、3、5、7、11、13、17、19、23、29、31、37……
+
+// 用户输入一个数字，弹出这个数字是否是质数。
+
+       var num = parseInt(prompt('请输入一个数'));
+       var cs=0;
+       for(var i=1;i<=num;i++) {
+           if(num%i===0){
+               cs++ 
+           }
+           
+       }
+          if(cs===2){
+               alert(num+'是质数')
+           }else{
+               alert(num+'不是质数')
+           }
+       
+
+    
+    </script>
+</body>
+</html>

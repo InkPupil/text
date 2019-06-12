@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>对象的创建</title>
+</head>
+<body>
+  <script>
+  var obj=new Object();//创建一个空对象
+  obj.name='张珊';
+  console.log(obj);
+  obj.age=8;
+  console.log(obj);
+  obj.say=function(){
+      alert('hello')
+  }
+   // 方式二  字面量
+   var obj2 = {};
+        // 可以追加属性和方法
+        var obj3 = {
+            name: '李四',
+            age: 18
+        }
+        // 创建的时候 直接指定属性和方法
+      // 方式三  自定义构造函数 
+        // this是一个指针  this的指向在调用前是不确定的.
+        // this 指向构造函数 new 出来的  实例对象
+        function Person(){
+             this.name='张珊';
+             this.age=6;
+             this.say=function(){
+                 alert('hello')
+             }
+            this.child={
+              name:'小敏'
+             }
+        }
+        var ax=new Person();
+        console.log(ax);
+
+  </script>  
+</body>
+</html>

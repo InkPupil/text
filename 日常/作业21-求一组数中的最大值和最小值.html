@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var arr=[8,9,5,3];
+    function getMax(arr){
+        var j=0;
+        var k=0;
+        for(var i=0;i<arr.length-1;i++){
+            if(arr[j]<arr[i+1]){
+                    j=i+1;
+            }
+            // if(arr[k]>arr[i+1]){
+            //     k=i+1;
+            // }
+        }
+        return arr[j] 
+        // ,arr[k];
+
+    }
+    
+    console.log(getMax(arr));
+    // console.log(geMax(arr[k]));
+function getMin(arr){
+    var k=0;
+    for(var i=0;i<arr.length-1;i++){
+            if(arr[k]>arr[i+1]){
+                    k=i+1;
+            }
+}
+return arr[k];
+}
+console.log(getMin(arr));
+    </script>
+</body>
+</html>

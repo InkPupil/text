@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>json对象</title>
+</head>
+<body>
+    <script>
+    var arr={
+        name:'张珊',
+        age:9
+
+    }
+    var jsonobj={
+        "name":"张珊",
+        "age":"9"
+    }
+    console.log(jsonobj.name);
+    // var jsonstr='{"name":"李四","age":"13"}';
+    var objStr = "{name: '张三 ',age: 19}";
+        // json字符串
+        var jsonObjStr = '{"name": "张三","age": "19"}';
+        // 字符串   还能拿到name属性? 
+        // json字符串需要再变回对象
+        var newJsonObj = JSON.parse(jsonObjStr);
+        // 只有json 类型的 字符串  才能变回对象
+        // var newObj = JSON.parse(objStr);// 报错
+        // console.log(newObj)
+        console.log(newJsonObj.name);
+         // 把对象变为 json字符串
+         var movieJson = {
+            "title": "西虹市首富",
+            "directors": "闫非",
+            "year": "2018",
+        }
+        // 将对象  转换为 json 字符串
+        var jsonStr = JSON.stringify(movieJson);
+        var objStr = JSON.stringify(obj);
+        console.log(objStr)
+        console.log(jsonStr)
+
+    </script>
+</body>
+</html>

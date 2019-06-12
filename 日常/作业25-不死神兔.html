@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    
+    // console.log(a); // undefined
+    //     var a = 2;
+        // 真正的执行顺序
+        // var a;
+        // console.log(a);
+        // a =2;
+        // foo();
+
+        // function foo() {
+        //     console.log('foo')
+        // }
+        //  sing();
+        // var sing = function () {
+        //     alert('sing')
+        // }
+        //不能执行
+          // 斐波那切数列
+        // 假设一对刚出生的小兔一个月后就能长成大兔，
+        // 再过一个月就能生下一对小兔，并且此后每个月都生一对小兔，一年内没有发生死亡，
+        // 问：一对刚出生的兔子，一年内繁殖成多少对兔子?
+        // 1
+        // 1
+        // 2
+        // 3
+        // 5
+        // 8
+        // 13
+        // 21
+        // 34
+        // 55
+        // 89
+        // 144
+        // 每一个月  都是 前两个月之和 (前一个月的 + 上上一个月)
+        function fb(n) {
+            // 跳出条件
+            if (n === 1 || n === 2) {
+                return 1
+            }
+            return fb(n - 1) + fb(n - 2);
+        }
+        console.log(fb(12));
+        // 走台阶的问题
+    </script>
+</body>
+</html>

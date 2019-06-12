@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>阶乘</title>
+</head>
+<body>
+    <script>
+//         所谓的阶乘，比如6的阶乘，就是1*2*3*4*5*6 = 720。
+// 现在，计算13的阶乘。
+
+    var jc=1;
+    var zf='';
+    for(var i=1; i<=13;i++) {
+        jc=jc*i;
+        if(i===13){
+            zf=zf+i;
+        }else{
+            zf=zf+i+'*';
+        }
+    }
+    console.log(zf);
+    console.log(zf+'='+jc);
+    
+    
+    </script>
+</body>
+</html>

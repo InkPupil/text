@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>函数的返回值</title>
+</head>
+<body>
+    <script>
+    // 1.函数程序运行后的结果外部需要使用的时候，我们不能拿到，需要通过return返回。
+	// 2.函数使用return语句后，这个函数会在执行完 return 语句之后停止并立即退出，也就是说return后面的所有其他代码都不会再执行。
+	// 3.函数里面可以没有return。
+    var a=5;
+    var b=6;
+    function add(x,y){
+        var sum=x+y;
+        alert('执行');
+        return sum;
+    }
+    var he=add(a,b)
+    console.log(he);
+    </script>
+</body>
+</html>

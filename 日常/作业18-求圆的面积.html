@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>圆的面积</title>
+</head>
+<body>
+    <script>
+    // 1、求圆的周长和面积   Math.PI  = 3.1415…
+    var r=Number(prompt('请输入半径'));
+    // var b=Number(prompt('请输入宽度'));
+    function pre(r){
+           return Math.floor(2*(Math.PI)*r);
+        //    var area=(Math.PI)*(Math.pow(r,2));
+         
+    }
+    function area(r){
+        return Math.floor(Math.PI*Math.pow(r,2));
+    }
+    console.log('这个圆的周长是',pre(r));
+    console.log('这个圆的面积是',area(r));
+    console.log(Math.PI);
+    </script>
+</body>
+</html>

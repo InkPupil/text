@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>电影名优化</title>
+</head>
+<body>
+    <script src="douban.js"></script>
+    <script>
+        
+        //var str='电影名:'+title+',导演:'+directors+'';
+        //  console.log(movies);
+         var subjects=movies.subjects;
+        //  console.log(subjects);
+         for(var i=0;i<subjects.length;i++){
+             var title=subjects[i].title;
+            //  console.log(title);
+             var directors=subjects[i].directors;
+            //  console.log(directors);
+            var png='';
+            for(var j=0;j<directors.length;j++){
+                png=png+directors[j].name+'/';
+                
+            }
+            var casts=subjects[i].casts;
+            // console.log(casts);
+            var png1='';
+            for(var a=0;a<casts.length;a++){
+                png1=png1+casts[a].name+'/';
+            }
+            // for(var a=0;)
+            // console.log(png);
+            png=png.substr(0,png.length-1);
+            png1=png1.substr(0,png1.length-1);
+            var str='电影名:'+title+',导演:'+png+',演员表:'+png1+'';
+            console.log(str);
+         }
+    </script>
+</body>
+</html>

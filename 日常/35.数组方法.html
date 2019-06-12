@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>数组方法</title>
+</head>
+<body>
+    <script>
+    var arr=[2,5,3,4,1];
+    var arr1=[7,4,9];
+    var arr2=arr.concat(arr1);
+    console.log(arr2);
+    //数组==>字符串 xx.jon();
+    var arrstr=arr2.join('-');
+    var arrstr1=arr.join(' ');
+    console.log(arrstr);
+    console.log(arrstr1);
+    //字符串变为数组  
+    //  字符串 变成数组
+        //  语法： 数组名.split(分隔符,数组长度)
+
+        // 通过指定分隔符，如果省略，默认以逗号分隔，将字符串分割为字符串数组。
+
+        // 第二个参数，制定返回数组的最大长度。
+    var emarr='abc@163.com;cc@126.com;frg@qq.com';
+    var emarr1=emarr.split(';',3);
+    console.log(emarr1);
+    console.log(emarr);
+// 添加元素 push()   unshift()
+        // push()  从后加入元素
+        // unshift()  从前边加入元素
+        // 都会改变原数组
+        var temp=arr.push('zhangshan');
+        arr.unshift('王五');
+        arr.push('李四');
+        console.log(arr);
+        console.log(temp);
+          // 删除 元素  pop() 删除数组最后一个元素
+        // shift()  删除数组的第一个元素
+        // 改变了 原数组
+        // 并且返回删除的元素
+        var temp2=arr.pop();
+       var temp3= arr.shift();
+        console.log(temp2);
+        console.log(temp3);
+        console.log(arr);
+        var temp4=arr.push();//没有添加任何元素
+        console.log(temp4);//这个得出的就是字符串的长度
+
+
+
+    </script>
+</body>
+</html>

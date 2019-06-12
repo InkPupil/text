@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>电影名</title>
+</head>
+<body>
+    <script src="douban.js">
+    </script>
+    <script>
+        console.log(movies);
+    console.log(movies.subjects);
+
+    var subjects=movies.subjects;
+    console.log(subjects);
+     
+    for(var i=0;i<subjects.length;i++){
+        
+       console.log(subjects[i].title);
+        // console.log(subjects[i].casts);
+        var casts=subjects[i].casts;
+         console.log(casts[0].name);
+        console.log(casts[1].name);
+        console.log(casts[2].name);
+        var genres=subjects[i].genres;
+        console.log(genres);
+         var sum=[];
+         sum.unshift(genres)
+         
+         
+         sum.unshift(subjects[i].title)
+         
+         
+         
+    }
+
+   
+        // console.log(key);
+        
+       
+
+    
+
+    
+
+
+    
+    
+    </script>
+</body>
+</html>
