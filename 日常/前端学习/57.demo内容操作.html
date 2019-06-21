@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>内容操作</title>
+</head>
+<body>
+    <input type="text">
+    <div class="box">
+        不凡学院
+    </div>
+     <div class="btn">设置input的值</div>
+     <div class="btn2">设置box的内容</div>
+     <div class="btn3">插入标签</div>
+     <script>
+     var inputEl=document.getElementsByTagName('input')[0];
+     var btn=document.getElementsByClassName('btn')[0];
+     var btn2=document.getElementsByClassName('btn2')[0];
+     var btn3=document.getElementsByClassName('btn3')[0];
+     var boxEl=document.getElementsByClassName('box')[0];
+     btn.onclick=function(){
+         inputEl.value=Math.floor(Math.random()*10);
+     }
+     btn2.onclick=function(){
+         boxEl.innerText='天气很热';
+         boxEl.innerText='很热';
+         //innerText会替换掉之前的所有内容
+     }
+     btn3.onclick=function(){
+         boxEl.innerHTML='<p>生而不凡</p>';
+     }
+     </script>
+
+</body>
+</html>

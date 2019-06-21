@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>小米的轮播</title>
+    <style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    ul{
+        list-style: none;
+    }
+    .banner{
+        position: relative;
+        margin:100px auto;
+        width: 1226px;
+        height: 460px;
+
+    }
+    a{
+        text-decoration: none;
+    }
+    .banner .arr{
+        position:absolute;
+        top:50%;
+        margin-left: 224px;
+        margin-top: -35px;
+        background-color:rgba(0,0,0,.4);
+        width: 40px;
+        height: 70px;
+        text-align: center;
+        line-height: 70px;
+        color: #fff;
+        font-size: 40px;
+
+    }
+    .banner .arr-r{
+         left: auto;
+         right: 0;
+    }
+    .dots{
+        position: absolute;
+        right: 20px;
+        bottom: 20px;
+
+    }
+    
+
+   
+    .dots .dot-itom{
+        float: left;
+        width: 10px;
+        height: 10px;
+        background-color: rgba(0, 0, 0, .8);
+        border: 2px solid gray;
+        background-clip: content-box;
+        margin-left: 10px;
+        border-radius: 50%;
+
+    }
+    .dots .dot-itom.active {
+            background-color: #fff;
+        }
+    .dots .dot-itom:hover {
+            background-color: #fff;
+        }
+    .dots .dot-itom a{
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+    .side {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 224px;
+            height: 420px;
+            padding: 20px 0;
+            text-indent: 20px;
+            background-color: rgba(0, 0, 0, .3);
+        }
+
+        .side li {
+            cursor: pointer;
+            width: 100%;
+            line-height: 42px;
+        }
+
+        .side li:hover {
+            background-color: orange;
+
+        }
+
+        .side li:hover .pro-box {
+            display: block;
+        }
+
+        .pro-box {
+            display: none;
+            position: absolute;
+            left: 224px;
+            top: 0;
+            width: 1002px;
+            height: 100%;
+            background-color: #fff;
+            z-index: 9;
+        }
+
+
+
+        .pro-box li {
+            width: 248px;
+            height: 76px;
+            float: left;
+        }
+
+        .pro-box li img {
+            width: 40px;
+            height: 40px;
+            vertical-align: middle;
+        }
+
+    
+    </style>
+</head>
+<body>
+   <div class="banner">
+       <img class="img" src="img1./m1.jpg" alt="">
+       <a class="arr arr-l" onclick="huaDong(false)"  href="javascript:;"><</a>
+       <a class="arr arr-r" onclick="huaDong(true)" href="javascript:;">></a>
+       <ul class="dots">
+         <!-- <li ++ class="dot-itom"><a href="javascript:;"></a></li> -->
+       </ul>
+       <ul class="side">
+            <!-- <li class="side-itom">
+                <ul></ul>
+            </li> -->
+       </ul>
+   </div>
+   <script src="data/data.js"></script> 
+   <script>
+   var imgArr=['m1.jpg', 'm2.jpg', 'm3.jpg', 'm4.jpg', 'm5.jpg', 'm6.jpg'];
+   var dotArr=document.getElementsByClassName('dots')[0];
+   var imgEl=document.getElementsByClassName('img')[0];
+   var side=document.getElementsByClassName('side')[0];
+   var proBoxArr = document.getElementsByClassName('pro-box');
+   var dianDian=dotArr.children;
+   //调用函数
+   initSide(side,colData);
+   initDots(dotArr,imgArr);
+   //封装函数动态生成小圆点
+   function initDots(el,arr){
+       var dotSrc='';
+       for(var i=0;i<arr.length;i++){
+         dotSrc+= '<li onclick="go('+i+')" class="dot-itom'+ (i===0? ' active' : '')+
+         '"><a href="javascript:;"></a></li>';
+       }
+      el.innerHTML=dotSrc;
+   }
+   var count=0;
+   //左右切换效果的实现函数
+   function huaDong(isright){
+       
+       
+             if(isright){
+
+                  count++;
+                  if(count>5){
+                      count=0;
+                  }
+             }else{
+                 count--;
+                 if(count<0){
+                     count=5;
+                 }
+             }
+       go(count);
+   }
+   //动态的添加类名
+   function addClass(el,className){
+       var oldClassStr='';
+       if(el.getAttribute('class')){
+           oldClassStr=el.getAttribute('class');
+           var oldClassArr=oldClassStr.split(' ');
+           if(oldClassArr.indexOf(className)!=-1){
+                  console.log('已经存在"'+className+'不需要添加');
+                  return;
+           }else{
+               oldClassStr+=' ';
+           }
+       }
+       //追加
+       oldClassStr += className;
+       el.setAttribute('class',oldClassStr);
+   }
+     //动态删除类名
+   function delClass(el,className){
+       if(!el.getAttribute('class')){
+           return;
+       }
+       var oldClassStr=el.getAttribute('class');
+       var oldClassArr=oldClassStr.split(' ');
+       var index=oldClassArr.indexOf(className);
+       if(index!=-1){
+           oldClassArr.splice(index,1);
+       }
+       oldClassStr=oldClassArr.join('');
+       el.setAttribute('class',oldClassStr);
+   }
+   function go(num){
+       count=num;
+       imgEl.src='img/'+imgArr[count];
+         for(var j=0;j<dianDian.length;j++){
+            delClass(dianDian[j],'active')
+         }
+         addClass(dianDian[count],'active')
+   }
+   //动态生成侧边栏
+   function initSide(el,arr){
+       var str='';
+       for(var i =0;i<arr.length;i++){
+        str=str+'<li class="side-itom">'+arr[i]+'<ul class="pro-box"></ul></li>';  
+       }
+       el.innerHTML=str;
+   }
+   for (var i = 0; i < proData.length; i++) {
+                initColPro(proBoxArr[i], proData[i]);
+
+            }
+           
+
+
+            function initColPro(el, arr) {
+                var str = '';
+                for (var i = 0; i < arr.length; i++) {
+                    str += '<li><img src="img/' + arr[i].img + '" alt="">' + arr[i].model + '</li>'
+                }
+                el.innerHTML = str;
+            }
+  
+   
+  
+   
+   </script>
+</body>
+</html>

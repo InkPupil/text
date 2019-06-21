@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>过滤选择器</title>
+    <script src="js/jquery-3.4.1.js"></script>
+</head>
+<body>
+    <ul>
+        <li class="li-item">1</li>
+        <li class="li-item active">2</li>
+        <li class="li-item">3</li>
+        <li class="li-item">4</li>
+        <li class="li-item">5</li>
+    </ul>
+    <script>
+    $('li:eq(0)').css('color','red');
+    $('li:gt(1)').css('color','blue');
+    $('li:lt(1)').css('color','green');
+    //奇数行
+    $('li:odd').css('color','orange');
+    $('li:even').css('color','pink');
+    $('li:first').css('color','red');
+    $('li:last').css('color','black');
+    </script>
+</body>
+</html>

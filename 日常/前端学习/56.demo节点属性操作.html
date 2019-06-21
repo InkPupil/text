@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>节点属性操作</title>
+</head>
+<body>
+    <h1 id="h1" class="title danger">
+
+    </h1>
+    <script>
+        var hlEl=document.getElementsByTagName('h1')[0];
+        console.log(hlEl.getAttribute('class'));
+        console.log(hlEl.className);
+        //获取 getAttribute(名称)
+        //设置:setAttribute(名称,值);
+        //删除:removeAttribute(名称)
+        hlEl.setArrribute('id','new');//把之前所有的都替换掉
+        hlEl.removeAttribute('id');
+    </script>
+</body>
+</html>

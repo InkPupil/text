@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>定时关闭广告</title>
+</head>
+<body>
+    <div class="ads">我是一条小广告</div>
+    <script>
+    
+    var ads=document.getElementsByClassName('ads')[0];
+    console.log(ads);
+    setTimeout(function (){
+        ads.style.display='none';
+    },5000);
+    </script>
+</body>
+</html>

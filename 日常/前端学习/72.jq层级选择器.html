@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>jq层级选择器</title>
+    <script src="js/jquery-3.4.1.js"></script>
+    <style>
+        /* 补充几个css 选择器 */
+        .li-item.active+li {
+            color: red;
+        }
+
+        .li-item.active~li {
+            color: red;
+        }
+
+        /* 空格 后代 (包括孙子) */
+        /* > 所有子代 (只包括儿子) */
+        /* .box div {
+
+        } */
+        .box {
+            width: 400px;
+        }
+
+        .w-box {
+            width: 300px;
+        }
+
+        .inner-box {
+            width: 100px;
+        }
+
+        .box>div {
+            width: 200px;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li class="li-item">1</li>
+        <li class="li-item active">2</li>
+        <li class="li-item">3</li>
+        <li class="li-item">4</li>
+    </ul>
+    <div class="box">
+        <div class="w-box">
+            <div class="inner-box">
+
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $('.li-item.active + li').css('color', 'blue')
+        console.log($('.li-item.active + li'));
+        console.log($('.li-item.active ~ li'));
+        console.log($('.box>div'));
+        console.log($('.box div'));
+    </script>
+</body>
+</html>

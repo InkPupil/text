@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>孩子节点</title>
+</head>
+<body>
+   <ul class="ul">
+       <li>li-1</li>
+       <li class="li2">li-2</li>
+       <li>li-3</li>
+       <li>li-4</li>
+       <li>li-5</li>
+       
+   </ul>
+   <script>
+      var ulEl=document.getElementsByClassName('ul')[0];
+      //firstChild 嫡出 ie(6,7,8) 高级浏览器(包括换行字符节点)
+      //firstElementChild 庶出 高级元素节点
+      console.log(ulEl.firstChild);
+      var firstChild=ulEl.firstElementChild||ulEl.firstChild;
+      console.log(firstChild);
+      //同理 lastChild lastElementChild
+      var lastChild=ulEl.lastElementChild||ulEl.lastChild;
+      console.log(lastChild);
+      //childNodes 嫡出  包括换行字符 注释节点
+
+      //children 庶出 只包括元素节点  (在ie6/7/8/中包含注释节点)
+
+      //自己封装方法 实现获取元素的子元素节点
+
+      function myChildren(el){
+          var children=el.children;
+          var childrenArr=[];
+          console.log(children);
+          for(var i=0; i<children.length;i++){
+              //如何判断注释节点
+              //nodeType=8是注释
+              //nodeType=1是元素节点
+              if(children[i].nodeType===1){
+                  childrenArr.push(children[i])
+              }
+          }
+          return childrenArr
+      }
+      var ulElChlddren=myChildren(ulEl);
+      console.log(ulElChlddren);
+
+   </script> 
+</body>
+</html>

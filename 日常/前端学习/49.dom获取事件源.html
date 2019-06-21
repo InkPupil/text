@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>获取事件源</title>
+    <script>
+        window.onload=function (){
+             var box=document.getElementsByTagName('h1')[0];
+             //通过标签来获取节点
+             console.log(box); 
+             var p1Text=document.getElementById('p1');
+            //通过id属性来获取节点 (唯一)
+             console.log(p1Text);
+             var innerbox=document.getElementsByClassName('inner-box')[0];
+             //通过class属性来获取节点
+             console.log(innerbox);
+
+        }
+   
+    </script>
+</head>
+<body>
+    <div>
+         <h1>不凡学院</h1>
+         <p id="p1">生而不凡</p>
+        <div class="inner-box">
+         天气不错
+        </div>
+    </div>
+</body>
+</html>  

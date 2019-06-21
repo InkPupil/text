@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>表格</title>
+    <style>
+    *{
+        padding:0;
+        margin: 0;
+
+        
+    }
+    table{
+
+        margin: 50px auto;
+        text-align: center;
+    }
+    th,td{
+        width: 100px;
+        height: 20px;
+    }
+    .text-center{
+        text-align: center;
+    }
+    .btn,.submit{
+        padding: 20px 30px;
+        margin-left: 5px;
+    }
+    .aut{
+        position: fixed;
+				top: 0;
+				left: 0;
+				display: none;
+				width: 100%;
+				height: 100%;
+				background-color: rgba(0,0,0,.25);
+    }
+    .auto{
+				width: 400px;
+				height: 240px;
+				padding-top: 30px;
+				margin: 100px auto;
+				background-color: #fff; 
+                /* background-color:rgba(3,3,3,0.2); */
+                /* display: none; */
+                }
+    .auto input{
+        width: 88%;
+				height: 40px;
+				margin-bottom: 10px;
+    }
+    </style>
+</head>
+<body>
+    <table border="1">
+      <tr>
+          <th>序号</th>
+          <th>姓名</th>
+          <th>年龄</th>
+          <th>性别</th>
+          <th>操作</th>
+      </tr>
+    <!-- <tr>
+        <td>序号</td><td>姓名</td><td>年龄</td><td>性别</td><td>操作</td>
+    </tr> -->
+      
+    </table>
+    <div class="text-center">
+          
+        <button class="btn add-selt">添加预定义数据</button>
+        <button class="btn add-zi">添加自定义数据</button>
+    </div>
+    <div class="text-center aut">
+     <div class="auto">
+           
+           <input type="text" class="name"  placeholder="请输入姓名">
+           <input type="text" class="age"  placeholder="请输入姓名">
+           <input type="text" class="sex"  placeholder="请输入姓名">
+           <button class="submit">提交</button>
+     </div>
+    </div>
+    
+    <script src="js/jquery-3.4.1.js"></script>
+    <script>
+    var usemName=[
+        {
+            name:'张珊',
+            age:'18',
+            sex:'女'
+        },
+        {
+            name:'李雨',
+            age:'28',
+            sex:'女'
+        },
+        {
+            name:'若曦',
+            age:'20',
+            sex:'女'
+        },
+        {
+            name:'李瑞',
+            age:'18',
+            sex:'女'
+        },
+        {
+            name:'芷华',
+            age:'18',
+            sex:'女'
+        },
+        {
+            name:'张三',
+            age:'18',
+            sex:'男'
+        },
+        {
+            name:'李四',
+            age:'16',
+            sex:'男'
+        },
+        {
+            name:'王二',
+            age:'158',
+            sex:'男'
+        },
+        {
+            name:'麻子',
+            age:'18',
+            sex:'男'
+        },
+        {
+            name:'王炸',
+            age:'20',
+            sex:'男'
+        },
+    ];
+    
+   var pand=null;
+   
+   var endet=false;//判断当前状态的标准位
+    $('.add-selt').click(function(){
+       
+        if(usemName.length==0){
+        alert('不要再点了,主人,已经没有数据了');
+        return; 
+        }
+        console.log(1);
+        var msg=usemName[0];
+        $('tr').length;
+        var str='<tr><td>'+$('tr').length+'</td><td>'+msg.name+'</td><td>'+msg.age+'</td><td>'+msg.sex+'</td><td><button class="classname">编辑</button><button class="remove">删除</button></td></tr>'
+       $('tbody').append(str);
+       usemName.shift();
+    });
+    $('.add-zi').click(function(){
+         $('.aut').show();
+    });
+    $('.aut').click(function(){
+        $(this).hide();
+        endet=false;
+        $('.auto .inpunt').val('');
+    });
+    //阻止冒泡
+    $('.auto').click(function(el){
+        el.stopPropagation();
+    });
+
+    $('.submit').click(function(){
+
+       
+        var name=$('.name').val();
+        var age=$('.age').val();
+        var sex=$('.sex').val();
+        
+        if(!name || !age || !sex){
+            alert('小主,请输入数据');
+            return;
+        };
+        if(endet){
+           
+        }else{
+            var str = '<tr><td>'+$("tr").length+'</td><td>'+name+'</td><td>'+age+'</td><td>'+sex+'</td><td><button class="edit">编辑</button><button class="remove">删除</button></td></tr>';
+            $('tbody').append(str);
+        }
+        $('.aut').hide();
+        $('.auto input').val('');
+    });
+    $('tbody').click(function(e){
+        if(e.target.className==='classname'){
+            console.log(8)
+            var name=$(e.target).parent().parent().children().eq(1).text();
+            var age=$(e.target).parent().parent().children().eq(2).text();
+            var sex=$(e.target).parent().parent().children().eq(3).text();
+            $('.name').val(name);
+            $('.age').val(age);
+            $('.sex').val(sex);
+            $('.aut').show();
+            endet=true;
+            
+        }
+        if(e.target.className==='remove'){
+            var mindex=$(e.target).parent().parent();
+            var aindex=mindex.index();
+            //更改后面得的所有兄弟元素的下标
+            var nextIndex=mindex.nextAll();
+            
+            nextIndex.each(function(index,item){
+                console.log("item ===>",item );
+                $(item).children().eq(0).text($(item).index()-1);
+            })
+            mindex.remove();
+        }
+   
+    })
+
+    
+
+    </script>
+</body>
+</html>

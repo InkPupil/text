@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>表格追加信息</title>
+
+</head>
+<body>
+    <table border="1" cellpadding="10" cellspacing="10">
+        <tr>
+            <th>序号</th>
+            <th>用户名</th>
+            <th>年龄</th>
+            <th>性别</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>张三</td>
+            <td>18</td>
+            <td>男</td>
+        </tr>
+        <tr><td>2</td><td>赵六</td><td>19</td><td>男</td></tr>
+    </table>
+    <button>追加一条数据</button>
+    <script src="js/jquery-3.4.1.js"></script>
+    <script>
+    var user = [{
+                username: '李四',
+                age: 22,
+                sex: '男'
+            },
+            {
+                username: '王五',
+                age: 25,
+                sex: '男'
+            },
+            {
+                username: '小红',
+                age: 18,
+                sex: '女'
+            },
+            {
+                username: '小明',
+                age: 19,
+                sex: '男'
+            }
+        ];
+        var count=0;
+        $('button').click(function(){
+            count++
+            var index=$('tr').length-1+1;
+            if(count<=user.length){
+                $('table').append('<tr><td>'+index+'</td><td>'+user[count].username+'</td><td>'+user[count].age+'</td><td>'+user[count].sex+'</td></tr>')
+            }else{
+                alert('没有更多的信息')
+            }
+        })
+
+    </script>
+</body>
+</html>

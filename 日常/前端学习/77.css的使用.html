@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>css使用</title>
+    <style>
+    .box{
+        width: 200px;
+        height: 200px;
+        background-color: pink;
+        margin: 100px auto;
+    }
+    </style>
+</head>
+<body>
+   <div class="box">
+     
+   </div> 
+   <script src="js/jquery-3.4.1.js"></script>
+   <script>
+  
+   console.log( $('.box').css('width'));
+   $('.box').css({
+       width:'400px',
+       height:'400px',
+       backgroundColor: '#333'
+   })
+   </script>
+</body>
+</html>

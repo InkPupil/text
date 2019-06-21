@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>jquery</title>
+    <script src="js/jquery-3.4.1.js"></script>
+</head>
+<body>
+    <script>
+    // window.onload=function(){
+    //     alert('abc')
+    // }
+    // window.onload=function(){
+    //     alert('edf')
+    // }
+    //window.onload必须等到页面包括图片的所有元素加载完毕后才执行
+    //而jquery入口函数不存在覆盖问题
+    $(document).ready(function(){alert('abc')
+    });
+    $(document).ready(function(){alert('edf')
+    });
+    //不等图片加载完就执行 (框架加载完就执行)
+    //简写
+    $(function(){
+        alert('不凡学院')
+    })
+    </script>
+</body>
+</html>

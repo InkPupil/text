@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>操作节点</title>
+</head>
+<body>
+        <div class="box">
+                我是一个盒子
+            </div>
+            <div class="btn">添张图片</div>
+            <div class="btn2">删除图片</div>
+            <div class="btn3">克隆节点</div>
+
+    <script>
+            var btn = document.getElementsByClassName("btn")[0];
+			var btn2 = document.getElementsByClassName("btn2")[0];
+			var btn3 = document.getElementsByClassName("btn3")[0];
+
+			var box = document.getElementsByClassName("box")[0];
+            //创建一个标签节点
+            var imgE =document.createElement("img");
+            var pE =document.createElement("p");
+            imgE.src="img/a.jpg";
+            btn.onclick=function(){
+                //插入节点 
+                box.appendChild(imgE);//同一个节点只能添加一次
+                box.insertBefore(pE, imgE);
+                //如果参考对象为null那么将在节点最后插入一个节点
+            }
+            btn2.onclick=function(){
+                // 知道父节点的情况下
+                // box.removeChild(imgE);
+                //不知道的情况下
+                imgE.parentNode.removeChild(imgE);
+            }
+            //克隆节点
+            // 调用函数cloneNode()得到一个新节点
+            //方法内部可以传参.是true深层复制 如果是false 只复制节点本身
+            btn3.onclick=function(){
+                
+                var boxClone= box.cloneNode(true);
+
+                document.body.appendChild(boxClone);
+            }
+            // btn3.onclick = function() {
+			// 	// var boxClone = box.cloneNode(false);
+			// 	var boxClone = box.cloneNode(true);
+
+			// 	document.body.appendChild(boxClone);
+			// }
+
+            
+    </script>
+</body>
+</html>

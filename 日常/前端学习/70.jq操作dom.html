@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>jq操作dom</title>
+    <script src="js/jquery-3.4.1.js"></script>
+</head>
+<body>
+    <p>不凡学院</p>
+    <script src="js/jquery-3.4.1.js"></script>
+    <script>
+    var pEl=document.getElementsByTagName('p')[0];
+    console.log(pEl);
+    //获取事件源 绑定数据 事件处理程序
+    // pEl.onclick= function() {
+    //     pEl.style.color='red';
+    // }
+    console.log($('p'));
+    //事件源 包装成jq对象
+    $('p').click(function(){
+        $('p').css('color','red');
+    });
+    $('p').addClass('active');
+    </script>
+    
+</body>
+</html>

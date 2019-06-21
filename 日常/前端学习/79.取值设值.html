@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>取值设值</title>
+    <style>
+    .box {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+   <div title="天气很好" class="box">
+          天气很好
+          
+   </div> 
+   <input type="text">
+   <script src="js/jquery-3.4.1.js"></script>
+   <script>
+   var $box=$('.box');
+
+   $box.text('不凡学院......');
+   console.log($box.text());
+
+//    val 设值输入框的内容 value
+    $('input').val('不凡学院');
+    console.log($('input').val());
+
+    //html innerHTML
+
+    $box.html('<p>生而不凡</p>');
+    console.log($box.html());
+    
+
+
+   </script>
+</body>
+</html>

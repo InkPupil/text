@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>dom操作</title>
+</head>
+<body>
+        <div class="box">
+
+            </div>
+            <ul>
+                <li class="li-item">1</li>
+                <li class="li-item li2">2</li>
+                <li class="li-item">3</li>
+                <li class="li-item">4</li>
+                <li class="li-item">5</li>
+                <p>不凡学院</p>
+                <li class="li-item">6</li>
+                <li class="li-item li7">7</li>
+                <li class="li-item">8</li>
+            </ul>
+    <script src="js/jquery-3.4.1.js"></script>
+    <script>
+    var $li2=$('.li2');
+    console.log($li2.next());//下一个兄弟
+    console.log($li2.nextAll());//后面得所有兄弟
+    
+    </script>
+</body>
+</html>

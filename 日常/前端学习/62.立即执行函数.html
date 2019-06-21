@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>立即执行函数</title>
+    <style>
+    ul{
+        list-style: none;
+    }
+    li{
+        background-color:red;
+    }
+    </style>
+</head>
+<body>
+    <ul>
+        <li class="li-item">1</li>
+        <li class="li-item">2</li>
+        <li class="li-item">3</li>
+        <li class="li-item">4</li>
+        <li class="li-item">5</li>
+        <li class="li-item">6</li>
+        
+    </ul>
+  <script>
+  var ulEl=document.getElementsByTagName('ul')[0];
+  var lis=ulEl.children;
+//   function foo(n){
+//       console.log(n)
+//   }
+//   foo(3);
+// var bar=function(){
+
+// }
+(function (num){console.log(num)})(5);
+//循环绑定事件
+
+for (var i=0;i<lis.length;i++){
+    //闭包 在函数外也能用函数里的变量
+    lis[i].onclick=(function (n){
+        console.log(n);
+        return function (){
+            console.log(n)
+            }
+            })(i)
+
+            // console.log(i);
+}
+  </script>  
+</body>
+</html>

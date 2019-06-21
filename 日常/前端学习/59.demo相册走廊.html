@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>相册走廊</title>
+    <style>
+    *{
+        padding: 0;
+        margin: 0;
+
+    }
+   
+
+        .imgs {
+            list-style: none;
+            overflow: hidden;
+        }
+
+        .imgs .img-item {
+            float: left;
+            width: 150px;
+        }
+
+        .img-item img {
+            width: 100%;
+        }
+    
+
+    </style>
+</head>
+<body>
+    <img class="img" src="img/m1.jpg" alt="">
+    <ul class="imgs">
+
+    </ul>
+    <script>
+    var imgEl=document.getElementsByClassName('img')[0];
+    var ulEl=document.getElementsByClassName('imgs')[0];
+    var imgArr=['m1.jpg','m2.jpg','m3.jpg','m4.jpg','m5.jpg','m6.jpg'];
+    var str='';
+
+    for(var i=0 ;i<imgArr.length;i++){
+           str=str+'<li id="li'+ i+'"class="img-item">'+'<img src="img/'+imgArr[i]+ '"alt="">'+'</li>';
+    }
+    ulEl.innerHTML=str;
+    var lis=ulEl.children;
+    //循环绑定事件
+    for(var j=0;j<lis.length;j++){
+         lis[j].onclick=function(){
+        //     var index=this.id.slice(2);
+        //     console.log(index);
+        //     imgEl.src='img/'+imgArr[index];
+            //方法二
+            var src=this.children[0].src;
+            imgEl.src=src;
+
+        }
+    }
+    </script>
+</body>
+</html>

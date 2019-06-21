@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>attr操作</title>
+    <style>
+    .box{
+        width: 200px;
+        height: 200px;
+        background-color: pink;
+        margin: 100px auto;
+    }
+    </style>
+    
+</head>
+<body>
+    <div id="wcao" title="天气很好啊" class="box">
+
+    </div>
+    <script src="js/jquery-3.4.1.js"></script>
+    <script>
+        //attr 属性操作 类比
+        console.log($('.box').attr('title'))//天气很好啊
+        
+        $('.box').attr('title','可不咋滴');
+        // 删除属性
+        $('.box').removeAttr('id');
+          
+          //点击 
+          $('.box').click(function(){
+              if($(this).attr('title')){
+                  //存在删除
+                $(this).removeAttr('title');
+              }else{
+                  $(this).attr('title','好的呢');
+              }
+          })
+    </script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>倒计时</title>
+</head>
+<body>
+    <p>距离2019年10月1日8点还有</p>
+    <p class="stamp"></p>
+    <script>
+    var oldTime='2019-10-1 8:00';
+    console.log(oldTime);
+
+    var oldDate=new Date(oldTime);
+    console.log(oldDate);
+
+    var oldTimeStamp=oldDate.getTime();
+    console.log(oldTimeStamp);
+
+    var stampStr='';
+    var pel=document.getElementsByClassName('stamp')[0];
+    console.log(pel);
+    setInterval (function (){
+        var nowDate=new Date();
+        var nowTimeStamp=nowDate.getTime();
+        //时间差
+        var stamp=oldTimeStamp-nowTimeStamp;
+        console.log(stamp);
+        //换算
+        var Hour_MS=60*60*1000;
+        var hour=Math.floor(stamp/Hour_MS);
+        //向下取整 取小时数
+        console.log(hour);
+        var Min_MS=60*1000;
+        var min=Math.floor(stamp%Hour_MS/Min_MS);
+        console.log(min);
+        //向下取整 取分钟数
+        var mm=Math.floor(stamp%Min_MS/1000);
+        stampStr=wrap(hour)+':'+wrap(min)+':'+wrap(mm);
+        console.log(stampStr);
+        // pel.innerText(stampStr);
+        pel.innerText=stampStr;
+        //插入时间
+    },1000);
+    function wrap(n){
+        return n<10?'0'+n:n;
+    }
+
+
+    </script>
+</body>
+</html>

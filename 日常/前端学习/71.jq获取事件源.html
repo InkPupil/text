@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>jq获取事件源</title>
+    <script src="js/jquery-3.4.1.js"></script>
+</head>
+<body>
+    <h2>不凡学院</h2>
+    <p class="title">欢迎来到不凡学院</p>
+    <p id="p1" class="text">今天天气很好</p> 
+    <div class="box">
+        <div class="inner-box">
+
+        </div>
+    </div>
+    <div class="inner-box active">
+
+    </div>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+    </ul>
+    <script>
+    //获取事件源
+    
+    console.log( $('h2'));// 通过标签名获取
+   
+   console.log( $('.title')); //通过class获取
+  
+   console.log( $('#p1')); //通过id选择
+   
+   console.log( $('.box .inner-box'));//后代选择器
+
+   console.log( $('.inner-box.active'));//并集选择器
+
+   console.log( $('h2,p'));//并集选择器
+
+   console.log( $('li'));//
+
+   $('li').click(function(){
+       $(this).css('color','red');
+   });
+    </script>
+</body>
+</html>

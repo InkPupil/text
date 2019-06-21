@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>定时器</title>
+</head>
+<body>
+    <script>
+        //5秒后打印5
+    setTimeout(function (){console.log(5)},5000 );
+
+    //循环执行 setInterval()
+    var xun=setInterval(function(){
+           console.log('循环执行')
+    },5000);
+    //clearInterval() 清除定时器
+
+    setTimeout(function (){
+        clearInterval(xun)
+    },5000) ;
+    //clearTtimeout() 用来清除setTimeout
+
+    for(var i=0;i<10;i++){
+        (function (n){
+            return setTimeout (function (){
+                console.log(n)
+            },n*1000)
+        })(i)
+    }
+
+
+    // for (var i = 0; i < 10; i++) {
+    //         (function (n) {
+    //             return setTimeout(function () {
+    //                 // 打印 0-9
+    //                 console.log(n);
+    //             }, n * 1000)
+    //         })(i)
+    //     }
+
+
+    // for (let i = 0; i < 10; i++) {
+    //         setTimeout(function () {
+    //             console.log(i)
+    //             // 修改  使他  打印 0---9
+    //         },1000)(i)
+    //     }
+
+    </script>
+</body>
+</html>

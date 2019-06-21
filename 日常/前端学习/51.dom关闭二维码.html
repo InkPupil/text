@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>关闭二维码</title>
+    <style>
+    * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .mask {
+             display: none;
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, .5);
+        }
+
+        .mask img {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .bth {
+            width: 5em;
+            border: 1px solid red;
+            /* text-align: center; */
+        }
+    </style>
+</head>
+<body>
+    <div class="bth">
+        打开二维码
+    </div>
+    <div class="mask">
+        <img src="img/wx.jpg" alt="">
+    </div>
+  <script>
+  var bthl=document.getElementsByClassName('bth')[0];
+  console.log(bthl);
+  var maskl=document.getElementsByClassName('mask')[0];
+  console.log(maskl);
+  bthl.onclick=function(){
+      maskl.style.display='block';
+      //让二维码出现
+      this.style.display='none';
+      //
+  }
+  maskl.onclick=function(){
+      this.style.display='none';
+      //
+      bthl.style.display='block';
+      
+  }
+  </script>  
+</body>
+</html>

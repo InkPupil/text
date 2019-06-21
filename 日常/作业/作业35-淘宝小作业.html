@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>淘宝小作业</title>
+    <style>
+     * {
+            margin: 0;
+            padding: 0;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .box {
+            width: 300px;
+            height: 180px;
+            margin: 100px auto;
+        }
+
+        .box ul {
+            float: left;
+            width: 50px;
+        }
+
+        .box .li-item {
+            width: 100%;
+            height: 20px;
+            text-align: center;
+        }
+
+        .box .li-item:hover {
+            background-color: red;
+        }
+
+        .box img {
+            float: left;
+            width: 200px;
+            height: 250px;
+        }
+    </style>
+</head>
+<body>
+        <div class="box">
+                <ul class="left">
+                <!-- <li><img src="" alt=""></li> -->
+                </ul>
+                <img src="img3/冬裙.jpg" alt="">
+                <ul class="right">
+        
+                </ul>
+            </div>
+            <script src="js/jquery-3.4.1.js"></script>
+            <script src="data/data1.js"></script>
+
+    <script>
+    
+    var $left=$('.left');
+    var $right=$('.right');
+    function initProduvt(el,arr){
+        var str='';
+        for(var i=0;i<arr.length;i++){
+            str+='<li class="li-item">'+arr[i].text+'</li>';
+        }
+        el.innerHTML=str;
+    }
+    initProduvt($left[0],product[0]);
+    initProduvt($right[0],product[1]);
+
+    $('.left li').mouseenter(function () {
+     var index=$(this).index();
+     $('img')[0].src='img3/'+product[0][index].img;
+    })
+
+    $('.right li').mouseenter(function () {
+     var index=$(this).index();
+     $('img')[0].src='img3/'+product[1][index].img;
+    })
+    </script>
+</body>
+</html>

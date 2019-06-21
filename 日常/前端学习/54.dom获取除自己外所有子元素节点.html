@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>获取自己外的所有子元素节点</title>
+</head>
+<body>
+        <ul class="ul">
+                <li>li_1</li>
+                <li class="li2">li_2</li>
+                <!-- 注释 -->
+                <li>li_3</li>
+                <li>li_4</li>
+                <li>li_5</li>
+            </ul>
+        <script>
+        
+        //获取除了li2的所有兄弟节点
+        //先获取li2的节点
+        var li2= document.getElementsByClassName('li2')[0];
+        console.log(li2);
+       //封装方法
+        function myChild(el){
+             var subling=[];
+             var subl=el.parentNode;
+             var subz=subl.children;
+             for(var i=0;i<subz.length;i++){
+                 if(subz[i].nodeType===1){
+                     if(subz[i]!==el){
+                         subling.push(subz[i])
+                     }
+                 }
+             }
+             return subling;
+        }
+        console.log(myChild(li2));
+
+
+        //第二种方法
+        function noteNext(el){
+            var sublingl=[]
+            var sun=el.parentNode;
+            var sunl=sun.children
+            var lock=false;
+            for(var i=0;i<sunl.length;i++){
+                if(sunl[i].nodeType===1){
+                    if(sunl[i]===el){
+                        lock=true;
+                    }else{
+                        if(lock){
+                            sublingl.push(sunl[i])
+                        }
+                    }
+                }
+            }
+            return sublingl
+        }
+        </script>
+</body>
+</html>

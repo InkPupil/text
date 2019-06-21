@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>捕获冒泡</title>
+</head>
+<body>
+        <ul>
+                我是ul
+                <li>
+                    我是li
+                    <p>
+                        我是p标签
+                    </p>
+                </li>
+            </ul>
+            <script>
+                var ul = document.getElementsByTagName('ul')[0];
+                var li = document.getElementsByTagName('li')[0];
+                var p = document.getElementsByTagName('p')[0];
+                // 第三个参数不写  默认 false
+                ul.addEventListener('click', function () {
+                    alert('我是ul')
+                }, true)
+                li.addEventListener('click', function () {
+                    alert('我是li')
+                }, false)
+                p.addEventListener('click', function () {
+                    alert('我是p')
+                }, true)
+            </script>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>手风琴特效</title>
+    <style>
+    *{
+    margin: 0;
+    padding: 0;
+    }
+    ul{
+        list-style: none;
+        overflow: hidden;
+        width: 1200px;
+
+    }
+
+    .box{
+        margin: 100px auto;
+        width: 1200px;
+        height: 400px;
+        background-color: yellow;
+    }
+    ul li{
+        float: left;
+        width: 200px;
+        height: 400px;
+
+    }
+    li img{
+        height: 100%;
+    }
+    </style>
+</head>
+<body>
+    <div class="box">
+
+        <ul>
+            <li class="item"><img src="img4/m1.jpg" alt=""></li>
+            <li class="item"><img src="img4/m2.jpg" alt=""></li>
+            <li class="item"><img src="img4/m3.jpg" alt=""></li>
+            <li class="item"><img src="img4/m4.jpg" alt=""></li>
+            <li class="item"><img src="img4/m5.jpg" alt=""></li>
+            <li class="item"><img src="img4/m6.jpg" alt=""></li>
+        </ul>
+    </div>
+    <script src="js/jquery-3.4.1.js"></script>
+    <script>
+    
+    var timer=null;
+    var weiz=null;
+    $('.item').mouseenter(function(){
+        var self=this;
+          clearTimeout(timer);
+        timer=setTimeout(function(){
+            weiz=self;
+            $(self).siblings().animate({
+                width:'100px'
+            })
+            $(self).animate({
+                width:'700px'
+            })
+        },200)
+    });
+    $('div').mouseleave(function(){
+        // console.log(1)
+        clearTimeout(timer);
+        $(weiz).animate({
+            width:'200px'
+        })
+        $(weiz).siblings().animate({
+            width:'200px'
+        })
+    })
+
+    </script>
+</body>
+</html>

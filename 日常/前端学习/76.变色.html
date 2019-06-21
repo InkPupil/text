@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>变色</title>
+    <style>
+        ul li {
+            width: 200px;
+            height: 100px;
+            background-color: black;
+            margin: 20px;
+            color: #fff;
+        }
+
+        a {
+            display: block;
+            width: 50px;
+            height: 50px;
+            background-color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li>1
+            <a href=""></a>
+        </li>
+        <li>2
+            <a href=""></a>
+
+        </li>
+        <li>3
+            <a href=""></a>
+
+        </li>
+        <li>4
+            <a href=""></a>
+
+        </li>
+        
+    </ul>
+    <script src="js/jquery-3.4.1.js"></script>
+    <script>
+    var colorBefore='';
+    // $('li').mouseover(function (){
+    //     colorBefore=$(this).css('backgroundColor');
+    //         console.log(colorBefore);
+    //         $(this).css('backgroundColor','#fff')
+    // });
+    // $('li').mouseout(function(){
+    //     console.log(1);
+    //     $(this).css('backgroundColor',colorBefore);
+        
+    // })
+    $('li').mouseenter(function(){
+        colorBefore=$(this).css('backgroundColor');
+        console.log(colorBefore);
+        $(this).css('backgroundColor','#fff');
+
+    });
+    $('li').mouseleave(function(){
+        $(this).css('backgroundColor',colorBefore);
+    });
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+   
+        
+        
+        <ul>
+		<li>li_1</li>
+		<li>li_2</li>
+		<li class="li3">li_3</li>
+		<li>li_4</li>
+		<li>li_5</li>
+	</ul>
+	
+	<script>
+	
+		$('.li3').click(function(){
+			$(this).css('background-color','red').text('这里是li_3').prev().css('background-color','pink').css('font-size','30px');
+        </script>
+</body>
+</html>
